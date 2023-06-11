@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Planning</fullName>
+        <default>false</default>
+        <label>PacksPromoPL</label>
+    </customValue>
+    <customValue>
+        <fullName>Monitoring</fullName>
+        <default>false</default>
+        <label>Monitoring</label>
+    </customValue>
+    <customValue>
+        <fullName>Finance</fullName>
+        <default>false</default>
+        <label>Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>Retailer</fullName>
+        <default>false</default>
+        <label>Retailer</label>
+    </customValue>
+    <customValue>
+        <fullName>Broker</fullName>
+        <default>false</default>
+        <label>Broker</label>
+    </customValue>
+    <customValue>
+        <fullName>VPC</fullName>
+        <default>false</default>
+        <label>Volume Planning</label>
+    </customValue>
+    <customValue>
+        <fullName>SPC</fullName>
+        <default>false</default>
+        <label>SPC</label>
+    </customValue>
+    <customValue>
+        <fullName>PromotionScenarios</fullName>
+        <default>false</default>
+        <label>PromotionScenarios</label>
+    </customValue>
+    <customValue>
+        <fullName>SPCLumpSum</fullName>
+        <default>false</default>
+        <label>SPCLumpSum</label>
+    </customValue>
+    <customValue>
+        <fullName>SPCPR</fullName>
+        <default>false</default>
+        <label>SPCPR</label>
+    </customValue>
+    <customValue>
+        <fullName>Adjustment</fullName>
+        <default>false</default>
+        <label>Adjustment</label>
+    </customValue>
+    <customValue>
+        <fullName>BaselineManagement</fullName>
+        <default>false</default>
+        <label>BaselineManagement</label>
+    </customValue>
+    <customValue>
+        <fullName>PromoUI</fullName>
+        <default>false</default>
+        <label>PromoUI</label>
+    </customValue>
+    <customValue>
+        <fullName>MidLevelPlanning</fullName>
+        <default>false</default>
+        <label>MidLevelPlanning</label>
+    </customValue>
+    <customValue>
+        <fullName>Baseline Planning (Packs)</fullName>
+        <default>false</default>
+        <label>Baseline Planning (Packs)</label>
+    </customValue>
+    <customValue>
+        <fullName>Baseline Planning (Cells)</fullName>
+        <default>false</default>
+        <label>Baseline Planning (Cells)</label>
+    </customValue>
+    <customValue>
+        <fullName>Baseline Planning (GIV)</fullName>
+        <default>false</default>
+        <label>Baseline Planning (GIV)</label>
+    </customValue>
+    <customValue>
+        <fullName>Baseline Planning (Cases)</fullName>
+        <default>false</default>
+        <label>Baseline Planning (Cases)</label>
+    </customValue>
+    <customValue>
+        <fullName>BaselineManagementPacks</fullName>
+        <default>false</default>
+        <label>Baseline Management (Packs)</label>
+    </customValue>
+    <customValue>
+        <fullName>BaselineManagementCells</fullName>
+        <default>false</default>
+        <label>Baseline Management (Cells)</label>
+    </customValue>
+    <customValue>
+        <fullName>BaselineManagementCases</fullName>
+        <default>false</default>
+        <label>Baseline Management (Cases)</label>
+    </customValue>
+    <customValue>
+        <fullName>BaselineManagementGIV</fullName>
+        <default>false</default>
+        <label>Baseline Management (GIV)</label>
+    </customValue>
+    <customValue>
+        <fullName>TotalVolumePlanningPacks</fullName>
+        <default>false</default>
+        <label>Total Volume Planning (Packs)</label>
+    </customValue>
+    <customValue>
+        <fullName>TotalVolumePlanningCases</fullName>
+        <default>false</default>
+        <label>Total Volume Planning (Cases)</label>
+    </customValue>
+    <customValue>
+        <fullName>TotalVolumePlanningCells</fullName>
+        <default>false</default>
+        <label>Total Volume Planning (Cells)</label>
+    </customValue>
+    <customValue>
+        <fullName>TotalVolumePlanningGIV</fullName>
+        <default>false</default>
+        <label>Total Volume Planning (GIV)</label>
+    </customValue>
+    <customValue>
+        <fullName>SPCVar</fullName>
+        <default>false</default>
+        <label>Spend Planning Variable</label>
+    </customValue>
+    <customValue>
+        <fullName>SPCFixed</fullName>
+        <default>false</default>
+        <label>Spend Planning Fixed</label>
+    </customValue>
+    <customValue>
+        <fullName>LogisticDiscountsSPCVar</fullName>
+        <default>false</default>
+        <label>LD Variable SPC PL</label>
+    </customValue>
+    <customValue>
+        <fullName>DistributorDiscountsSPCVar</fullName>
+        <default>false</default>
+        <label>DD Variable SPC PL</label>
+    </customValue>
+    <customValue>
+        <fullName>ConsumerPriceReductionSPCVar</fullName>
+        <default>false</default>
+        <label>CPR Variable SPC PL</label>
+    </customValue>
+    <customValue>
+        <fullName>ConsumerPriceReductionEOSPCVar</fullName>
+        <default>false</default>
+        <label>CPR EO Variable SPC PL</label>
+    </customValue>
+    <customValue>
+        <fullName>LTASPCvar</fullName>
+        <default>false</default>
+        <label>LTA Variable SPC PL</label>
+    </customValue>
+    <customValue>
+        <fullName>LTAOIExtraSPCVar</fullName>
+        <default>false</default>
+        <label>LTA OI Extra Variable SPC PL</label>
+    </customValue>
+    <customValue>
+        <fullName>DisplayShipperSPCVar</fullName>
+        <default>false</default>
+        <label>DS Variable SPC PL</label>
+    </customValue>
+    <customValue>
+        <fullName>CashDiscountsSPCVar</fullName>
+        <default>false</default>
+        <label>CD Variable SPC PL</label>
+    </customValue>
+    <customValue>
+        <fullName>CellsPromoPL</fullName>
+        <default>false</default>
+        <label>CellsPromoPL</label>
+    </customValue>
+    <customValue>
+        <fullName>CasesPromoPL</fullName>
+        <default>false</default>
+        <label>CasesPromoPL</label>
+    </customValue>
+    <customValue>
+        <fullName>AccountPnL</fullName>
+        <default>false</default>
+        <label>Account P&amp;L</label>
+    </customValue>
+       <description>Different users are interested in different kpis. This picklist differentiates between these intrests.</description>
+    <masterLabel>KPI Subsets</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

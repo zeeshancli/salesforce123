@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_ShipmentThrough__c</fullName>
+    <description>Valid Through of the condition (shipment through)</description>
+    <externalId>false</externalId>
+    <formula>cgcloud__Tactic__r.cgcloud__Shipment_Date_Thru__c</formula>
+    <label>Shipment Valid Through</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

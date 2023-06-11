@@ -1,0 +1,85 @@
+<template>
+    <!--If Records found successfully then display the component-->
+    <template lwc:if={isRecordsFound}>
+        <lightning-card>
+                <!-- Card Header that holds card title and no of records count-->
+                <div class="slds-grid slds-grid_vertical">
+                    <div class="slds-col">
+                        <span>
+                            <lightning-icon icon-name='custom:custom83' 
+                                            alternative-text='custom83' 
+                                            size='small' 
+                                            title='custom83'
+                                            class="img img slds-m-left_small slds-m-right_x-small slds-m-bottom_small">
+                            </lightning-icon>
+                                <span class="slds-truncate slds-p-around_xx-small card-heading a-background">
+                                    Approvals ({noOfRecords})
+                                </span>        
+                        </span>
+                    </div>
+                </div>
+                <!--Datatable displaying the approval records-->
+                <table class="slds-table slds-table_cell-buffer slds-table_fixed-layout slds-max-medium-table_stacked-horizontal slds-table_bordered">
+                    <!--Table Columns-->
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="slds-text-title" scope="col">
+                                <div class="slds-truncate" title="Approval">{labels.Approval}</div>
+                            </th>
+                            <th class="slds-text-title" scope="col">
+                                <div class="slds-truncate" title="Approval Created Date">{labels.ApprovalCreatedDate}</div>
+                            </th>
+                            <th class="slds-text-title" scope="col">
+                                <div class="slds-truncate" title="Promotion Submitter">{labels.ApprovalStatus}</div>
+                            </th>
+                            <th class="slds-text-title" scope="col">
+                                <div class="slds-truncate" title="Approver">{labels.Approver}</div>
+                            </th>
+                            <th class="slds-text-title" scope="col">
+                                <div class="slds-truncate" title="Promotion Submitter">{labels.PromotionSubmitter}</div>
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+                <!--Div Container for Scrollbar-->
+                <div class={tableScrollBarClass}>
+                    <table class="slds-table slds-table_cell-buffer slds-table_fixed-layout slds-max-medium-table_stacked-horizontal slds-table_bordered ">
+                        <!--Table Actual Body-->
+                        <tbody>
+                            <template for:each={promotionRelatedApprovals} for:item="eachRecord">
+                                <tr key={eachRecord.approvalRecordId}>
+                                    <!--First Column Approval-->
+                                    <td data-label="Approval">
+                                        <!--If User has record read access then hyperlink with Name of the approval record-->
+                                        <template lwc:if ={eachRecord.iscurrentRecordAccess}>
+                                            <div class="slds-truncate"><a href={eachRecord.approvalRecordURL} target="_blank">{eachRecord.approvalRecordName}</a></div>
+                                        </template>
+                                        <!--If User doesnt has record read access then Name of the approval record-->
+                                        <template lwc:else>
+                                            <div class="slds-truncate">{eachRecord.approvalRecordName}</div>
+                                        </template> 
+                                    </td>
+                                    <!--Second Column Approval Created Date-->
+                                    <td data-label="Approval Created Date">
+                                        <div class="tableRowMarginLeftXSmall">{eachRecord.approvalRecordCreatedDate}</div>
+                                    </td>
+                                    <!--Third Column Approval Status-->
+                                    <td data-label="Approval Status">
+                                        <div class={tableRowMarginLeftXSmall}>{eachRecord.approvalStatus}</div>
+                                    </td>
+                                    <!--Fourth Column Approver-->
+                                    <td data-label="Approver">
+                                        <div class={tableRowMarginLeftSmall}>{eachRecord.approvalRecordOwner}</div>
+                                    </td>
+                                    <!--Fifth Column Promotion Submitter-->
+                                    <td data-label="Promotion Submitter">
+                                        <div class={tableRowMarginLeftSmall}>{eachRecord.promotionRecordSubmitter}</div>
+                                    </td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+        </lightning-card>
+    </template>
+</template>

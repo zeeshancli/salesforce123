@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Hierarchy_Level__c</fullName>
+    <description>The level of the customer hierarchy in which this Account record lives</description>
+    <externalId>false</externalId>
+    <label>Hierarchy Level</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>TPM_Customer_Level</valueSetName>
+    </valueSet>
+</CustomField>

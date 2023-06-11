@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Default_Sales_Organization__c</fullName>
+    <description>Default Sales Org upon login to TPM</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Default Sales Org upon login to TPM</inlineHelpText>
+    <label>Default Sales Organization</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>cgcloud__Sales_Org</valueSetName>
+    </valueSet>
+</CustomField>

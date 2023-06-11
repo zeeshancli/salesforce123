@@ -1,0 +1,33 @@
+Name,cgcloud__Usage__c,cgcloud__Description_Language_1__c,TPM_Sales_Org__c,TPM_KPISetType__c,cgcloud__Description_Language_2__c,cgcloud__Description_Language_3__c,cgcloud__Description_Language_4__c,cgcloud__Child_Object_Dependency__c
+BasicPlanningMode,Plan,Basic Planning Mode,US01,Basic,,,,TRUE
+IntermediatePlanningMode,Plan,Intermediate Planning Mode,US01,Intermediate,,,,TRUE
+BasicPlanningMode_Push,Plan,Basic Planning Mode with Push Down Volume,IT01,Basic,,,,TRUE
+IntermediatePlanningMode_Push,Plan,Intermediate Planning Mode with Push Down Volume,IT01,Intermediate,,,,TRUE
+LTA_Basic_IT01,Promotion,Long-Term Agreement,IT01,LTA,,,,
+LTA_Basic_US01,Promotion,Long-Term Agreement,US01,LTA,,,,
+LTA_Intermediate_IT01,Promotion,Long-Term Agreement,IT01,LTA,,,,
+LTA_Intermediate_US01,Promotion,Long-Term Agreement,US01,LTA,,,,
+Parent_LTA_IT01,Promotion,Parent Long- Term Agreement,IT01,Parent LTA,,,,
+Child_LTA_IT01,Promotion,Child Long- Term Agreement,IT01,Child LTA,,,,
+EDLP_Basic_US01,Promotion,EDLP,US01,EDLP,,,,
+EDLP_Basic_IT01,Promotion,EDLP,IT01,EDLP,,,,
+EDLP_Intermediate_US01,Promotion,EDLP,US01,EDLP,,,,
+EDLP_Intermediate_IT01,Promotion,EDLP,IT01,EDLP,,,,
+ShortTermEvent_Basic_IT01,Promotion,Short Term Event,IT01,Short Term Events,,,,
+ShortTermEvent_Basic_US01,Promotion,Short Term Event,US01,Short Term Events,,,,
+ShortTermEvent_Intermediate_IT01,Promotion,Short Term Event,IT01,Short Term Events,,,,
+ShortTermEvent_Intermediate_US01,Promotion,Short Term Event,US01,Short Term Events,,,,
+Parent_ShortTermEvent_IT01,Promotion,Parent Short Term Event,IT01,Parent Short Term Event,,,,
+Child_ShortTermEvent_IT01,Promotion,Child Short Term Event,IT01,Child Short Term Event,,,,
+OtherPrograms_Basic_IT01,Promotion ,Other Programs,IT01,Other Programs,,,,
+OtherPrograms_Basic_US01,Promotion,Other Programs,US01,Other Programs,,,,
+OtherPrograms_Intermediate_IT01,Promotion,Other Programs,IT01,Other Programs,,,,
+OtherPrograms_Intermediate_US01,Promotion,Other Programs,US01,Other Programs,,,,
+Parent_OtherPrograms_IT01,Promotion,Parent Other Programs,IT01,Parent Other Programs,,,,
+Child_OtherPrograms_IT01,Promotion,Child Other Programs,IT01,Child Other Programs,,,,
+DisplayShipper_Basic_IT01,Promotion,Display Shipper,IT01,Display Shipper,,,,
+DisplayShipper_Basic_US01,Promotion,Display Shipper,US01,Display Shipper,,,,
+DisplayShipper_Intermediate_IT01,Promotion,Display Shipper,IT01,Display Shipper,,,,
+DisplayShipper_Intermediate_US01,Promotion,Display Shipper,US01,Display Shipper,,,,
+Parent_VolumePush_IT01,Promotion,Parent Volume Push,IT01,Parent Volume Push,,,,
+Child_VolumePush_IT01,Promotion,Child Volume Push,IT01,Child Volume Push,,,,

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Rate_Basis_Validation</fullName>
+    <active>true</active>
+    <description>You cannot assign Per Pack rate basis to this tactic type. Please try again</description>
+    <errorConditionFormula>AND(
+NOT( ISBLANK($Label.TPM_Rate_Basis_Validation_Label) ),
+OR(
+(cgcloud__Tactic_Template__r.Name =&quot;DisplayShipper_Variable_US01&quot; &amp;&amp;  ISPICKVAL( cgcloud__Payment_Method__c , &quot;OI&quot;) &amp;&amp; ISPICKVAL( cgcloud__Compensation_Model__c , &quot;PerCase&quot;)),
+ (cgcloud__Tactic_Template__r.Name =&quot;DisplayShipper_Variable_US01&quot; &amp;&amp;  ISPICKVAL( cgcloud__Payment_Method__c , &quot;Billback/Retrospective&quot;) &amp;&amp; ISPICKVAL( cgcloud__Compensation_Model__c , &quot;PerCase&quot;)),
+ ( CONTAINS( $Label.TPM_Rate_Basis_Validation_Label ,  cgcloud__Tactic_Template__r.Name )  &amp;&amp; ISPICKVAL( cgcloud__Payment_Method__c , &quot;OI&quot;) &amp;&amp; ISPICKVAL( cgcloud__Compensation_Model__c , &quot;PerCase&quot;) &amp;&amp; cgcloud__Sales_Org__c = &quot;IT01&quot;)
+))</errorConditionFormula>
+    <errorMessage>You cannot assign Per Pack rate basis to this tactic type. Please try again</errorMessage>
+</ValidationRule>

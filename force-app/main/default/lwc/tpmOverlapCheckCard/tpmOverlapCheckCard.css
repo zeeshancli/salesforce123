@@ -1,0 +1,26 @@
+.tpm-custom-box{
+    padding-bottom: 8px;
+}
+
+.tpm-custom-accordian-title{
+    color: #16325c;
+    font-size: 18px;
+    background-color: white;
+
+}
+
+.tpm-custom-accordian-icon{
+    --sds-c-icon-color-foreground-default: #a7b8d1;
+    font-size: 12px;
+    background-color: white;
+
+}
+
+.slds-section__title-action{
+
+    background: white;
+    color: white;
+}
+
+
+

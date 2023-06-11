@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cgcloud__PriceReduction</fullName>
+    <active>true</active>
+    <label>Price Reduction</label>
+    <picklistValues>
+        <picklist>TPM_Payment_Info__c</picklist>
+        <values>
+            <fullName>Rebates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Services</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TPM_Price_Basis__c</picklist>
+        <values>
+            <fullName>Gross %28US%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NIV %28IT%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TPM_Volume_Basis__c</picklist>
+        <values>
+            <fullName>Consumption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>cgcloud__Payment_Method__c</picklist>
+        <values>
+            <fullName>Billback%2FRetrospective</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OI</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

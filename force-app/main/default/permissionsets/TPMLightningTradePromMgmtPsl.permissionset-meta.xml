@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Gives access to objects and features for Consumer Goods Cloud trade promotion management.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>TPM Lightning Trade Promotion Management Psl</label>
+    <license>LightningTradePromMgmtPsl</license>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>CGCTradePromotionManagement</name>
+    </userPermissions>
+</PermissionSet>

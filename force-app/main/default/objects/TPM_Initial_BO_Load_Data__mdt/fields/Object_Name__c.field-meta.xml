@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Object_Name__c</fullName>
+    <description>Object name</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <label>Object Name</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>cgcloud__BO_API_Workflow_Step__c</fullName>
+                <default>true</default>
+                <label>cgcloud__BO_API_Workflow_Step__c</label>
+            </value>
+            <value>
+                <fullName>cgcloud__BO_API_Workflow__c</fullName>
+                <default>false</default>
+                <label>cgcloud__BO_API_Workflow__c</label>
+            </value>
+            <value>
+                <fullName>cgcloud__BO_API_Step_Input_Structure__c</fullName>
+                <default>false</default>
+                <label>cgcloud__BO_API_Step_Input_Structure__c</label>
+            </value>
+            <value>
+                <fullName>cgcloud__BO_API_Output_Entity__c</fullName>
+                <default>false</default>
+                <label>cgcloud__BO_API_Output_Entity__c</label>
+            </value>
+            <value>
+                <fullName>cgcloud__BO_API_Workflow_Entity__c</fullName>
+                <default>false</default>
+                <label>cgcloud__BO_API_Workflow_Entity__c</label>
+            </value>
+            <value>
+                <fullName>cgcloud__BO_API_Workflow_Workflow_Step__c</fullName>
+                <default>false</default>
+                <label>cgcloud__BO_API_Workflow_Workflow_Step__c</label>
+            </value>
+            <value>
+                <fullName>cgcloud__BO_API_Entity__c</fullName>
+                <default>false</default>
+                <label>cgcloud__BO_API_Entity__c</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

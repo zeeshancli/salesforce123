@@ -1,0 +1,104 @@
+{
+    "Columns":  [
+        {
+            "CRows": [
+                {
+                    "RColumns": [
+                        {
+                            "Type": "Picklist",
+                            "Name": "cgcloud__Compensation_Model__c",
+                            "Mandatory": true
+                        },
+                        {
+                            "Type": "Picklist",
+                            "Name": "cgcloud__Payment_Method__c",
+                            "Mandatory": true
+                        }
+                    ]
+                },
+                {
+                    "RColumns": [
+                        {
+                            "Type": "Picklist",
+                            "Name": "TPM_Payment_Info__c",
+                            "Mandatory": true
+                        },
+                        {
+                            "Type": "Checkbox",
+                            "Name": "cgcloud__Included__c",
+                            "Mandatory": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "CRows": [
+                {
+                    "RColumns": [
+                        {
+                            "Type": "Date",
+                            "Name": "cgcloud__Instore_Date_From__c",
+                            "Mandatory": true
+                        },
+                        {
+                            "Type": "Date",
+                            "Name": "cgcloud__Instore_Date_Thru__c",
+                            "Mandatory": true
+                        }
+                    ]
+                },
+                {
+                    "RColumns": [
+                        {
+                            "Type": "Date",
+                            "Name": "cgcloud__Shipment_Date_From__c",
+                            "Mandatory": true
+                        },
+                        {
+                            "Type": "Date",
+                            "Name": "cgcloud__Shipment_Date_Thru__c",
+                            "Mandatory": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "CRows": [
+                {
+                    "RColumns": [
+                        {
+                            "Type": "Number",
+                            "Name": "cgcloud__To_Date_Paid_Amount__c",
+                            "Mandatory": false,
+                            "ReadOnly": true
+                        },
+                        {
+                            "Type": "Number",
+                            "Name": "cgcloud__Pending_Amount__c",
+                            "Mandatory": false,
+                            "ReadOnly": true
+                        }
+                    ]
+                },
+                {
+                    "RColumns": [
+                        {
+                            "Type": "Number",
+                            "Name": "cgcloud__Plan_Spend__c",
+                            "Mandatory": false,
+                            "ReadOnly": true
+                        },
+                        {
+                            "Type": "Text",
+                            "Name": "cgcloud__Tactic_Type__c",
+                            "Mandatory": false,
+                            "ReadOnly": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

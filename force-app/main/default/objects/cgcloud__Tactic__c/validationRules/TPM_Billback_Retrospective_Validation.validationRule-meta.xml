@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Billback_Retrospective_Validation</fullName>
+    <active>true</active>
+    <description>You cannot assign the Billback / Retrospective payment method to this tactic type. Please try again</description>
+    <errorConditionFormula>AND(
+NOT( ISBLANK( $Label.TPM_Billback_Retrospective_Validation_Label )),
+AND(
+CONTAINS( $Label.TPM_Billback_Retrospective_Validation_Label ,  cgcloud__Tactic_Template__r.Name ),
+ISPICKVAL( cgcloud__Payment_Method__c , &quot;Billback/Retrospective&quot;),
+cgcloud__Sales_Org__c = &quot;IT01&quot;
+)
+)</errorConditionFormula>
+    <errorMessage>You cannot assign the Billback / Retrospective payment method to this tactic type. Please try again</errorMessage>
+</ValidationRule>

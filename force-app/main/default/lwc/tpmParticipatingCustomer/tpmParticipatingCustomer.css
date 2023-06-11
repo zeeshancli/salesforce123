@@ -1,0 +1,33 @@
+.tpm-custom-accordian-title{
+    fill: #16325c;
+    /*background: white;*/
+    
+}
+.my-icon {
+    --lwc-colorTextIconDefault: #0070d2;
+}
+.mytd {
+    background-color: unset !important;
+    color: unset !important;
+}
+
+.slds-is-open {
+    --slds-c-accordion-summary-text-decoration: none;
+  }
+
+:host{
+   
+    --slds-c-accordion-heading-text-color : #16325c;
+    --slds-c-accordion-heading-font-size: 18px;
+    --slds-c-accordion-section-spacing-block-start : 0;
+    --slds-accordion__summary-content-text-decoration :none;
+    --slds-c-accordion-summary-text-decoration: none;
+    /*--slds-c-accordion-section-spacing-inline-start : 0;
+    --slds-c-accordion-heading-spacing-block-start : 75px;
+    --slds-c-accordion-heading-spacing-inline-start : 75px;*/
+    
+}
+/*.slds-accordion__section{
+    padding-left : 0;
+    padding-inline-start: 0;
+}*/

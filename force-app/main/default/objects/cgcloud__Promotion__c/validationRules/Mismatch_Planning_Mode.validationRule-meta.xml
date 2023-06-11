@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mismatch_Planning_Mode</fullName>
+    <active>true</active>
+    <description>The Promotion Template and Managed Account you have chosen cannot be planned together based on mismatching planning modes. Please update either option before attempting again</description>
+    <errorConditionFormula>IF(cgcloud__Promotion_Template__r.cgcloud__Is_Pushable__c = false &amp;&amp;
+   OR( 
+      (
+       IF( ISPICKVAL(cgcloud__Anchor_Account__r.TPM_Planning_Mode__c, &quot;Basic&quot;) 
+       &amp;&amp; ISPICKVAL( cgcloud__Promotion_Template__r.TPM_Planning_Mode__c , &quot;Intermediate&quot;), true, false)
+      ),
+      (
+       IF( ISPICKVAL(cgcloud__Anchor_Account__r.TPM_Planning_Mode__c, 
+       &quot;Intermediate&quot; ) &amp;&amp; ISPICKVAL( cgcloud__Promotion_Template__r.TPM_Planning_Mode__c , &quot;Basic&quot;), true, false)
+      ) 
+     ), true, false
+)</errorConditionFormula>
+    <errorMessage>The Promotion Template and Managed Account you have chosen cannot be planned together based on mismatching planning modes. Please update either option before attempting again</errorMessage>
+</ValidationRule>

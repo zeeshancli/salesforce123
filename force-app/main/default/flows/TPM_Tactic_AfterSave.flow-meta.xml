@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <description>Length Of Tactic Name</description>
+        <name>Determine_length_Of_Tactic_Name</name>
+        <label>Determine Length Of Tactic Name</label>
+        <locationX>314</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_length_is_less_than_9</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Length_of_Tactic_Name</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <numberValue>9.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Populate_externalID_for_Length_less_than_9</targetReference>
+            </connector>
+            <label>If length is less than 9</label>
+        </rules>
+        <rules>
+            <name>If_length_is_greater_than_or_equal_to_9</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Length_of_Tactic_Name</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>9.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Populate_externalID_for_Length_9_or_above</targetReference>
+            </connector>
+            <label>If length is greater than or equal to 9</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <description>External_ID_for_Length_8_or_above</description>
+        <name>External_ID_for_Length_9_or_above</name>
+        <dataType>String</dataType>
+        <expression>&quot;T&quot;+RIGHT({!$Record.Name},{!Length_of_Tactic_Name})</expression>
+    </formulas>
+    <formulas>
+        <description>externalID for Length less than 9</description>
+        <name>External_ID_for_Length_lessThan_9</name>
+        <dataType>String</dataType>
+        <expression>LEFT(&quot;T00&quot;,10-{!Length_of_Tactic_Name})+RIGHT({!$Record.Name},{!Length_of_Tactic_Name})</expression>
+    </formulas>
+    <formulas>
+        <description>Length_of_Tactic_Name</description>
+        <name>Length_of_Tactic_Name</name>
+        <dataType>Number</dataType>
+        <expression>LEN(RIGHT({!$Record.Name},LEN({!$Record.Name})-FIND(&quot;-&quot;,{!$Record.Name})))</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>TPM_Tactic_AfterSave {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>TPM_Tactic_AfterSave</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Populate externalID for Length 9 or above</description>
+        <name>Populate_externalID_for_Length_9_or_above</name>
+        <label>Populate externalID for Length 9 or above</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>cgcloud__ExternalId__c</field>
+            <value>
+                <elementReference>External_ID_for_Length_9_or_above</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Populate externalID for Length less than 9</description>
+        <name>Populate_externalID_for_Length_less_than_9</name>
+        <label>Populate externalID for Length less than 9</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>cgcloud__ExternalId__c</field>
+            <value>
+                <elementReference>External_ID_for_Length_lessThan_9</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Determine_length_Of_Tactic_Name</targetReference>
+        </connector>
+        <object>cgcloud__Tactic__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

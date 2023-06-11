@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_OI_Validation</fullName>
+    <active>true</active>
+    <description>You cannot assign the OI payment method to this tactic type. Please try again.</description>
+    <errorConditionFormula>AND(
+NOT( ISBLANK( $Label.TPM_OI_Validation_Label ) ),
+OR(
+ (CONTAINS( $Label.TPM_OI_Validation_Label,  cgcloud__Tactic_Template__r.Name ) &amp;&amp;  ISPICKVAL( cgcloud__Payment_Method__c , &quot;OI&quot;)),
+( ISPICKVAL( cgcloud__Compensation_Model__c , &quot;LumpSum&quot;) &amp;&amp;  ISPICKVAL( cgcloud__Payment_Method__c , &quot;OI&quot;) &amp;&amp;  RecordType.DeveloperName = &quot;Display&quot;)
+
+))</errorConditionFormula>
+    <errorMessage>You cannot assign the OI payment method to this tactic type. Please try again.</errorMessage>
+</ValidationRule>

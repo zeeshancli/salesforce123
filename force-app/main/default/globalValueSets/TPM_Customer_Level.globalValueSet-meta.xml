@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Total Sales Org</fullName>
+        <default>false</default>
+        <label>Total Sales Org</label>
+    </customValue>
+    <customValue>
+        <fullName>SuperGroup</fullName>
+        <default>false</default>
+        <label>SuperGroup</label>
+    </customValue>
+    <customValue>
+        <fullName>Group</fullName>
+        <default>false</default>
+        <label>Group</label>
+    </customValue>
+    <customValue>
+        <fullName>Managed Account</fullName>
+        <default>false</default>
+        <label>Managed Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Sold-To</fullName>
+        <default>false</default>
+        <label>Sold-To</label>
+    </customValue>
+    <description>Levels of the customer</description>
+    <masterLabel>Customer Level</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

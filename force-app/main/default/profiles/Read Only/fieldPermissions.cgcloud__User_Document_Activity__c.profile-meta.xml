@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__User_Document_Activity__c.cgcloud__Activity__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__User_Document_Activity__c.cgcloud__Duration__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__User_Document_Activity__c.cgcloud__Hours__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__User_Document_Activity__c.cgcloud__Minutes__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__User_Document_Activity__c.cgcloud__Record_Link__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+</Profile>

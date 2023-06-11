@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Payment_Tactic_Product__c.cgcloud__Additional_Kpi_Value_1__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Payment_Tactic_Product__c.cgcloud__Additional_Kpi_Value_2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Payment_Tactic_Product__c.cgcloud__Additional_Kpi_Value_3__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Payment_Tactic_Product__c.cgcloud__Amount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Payment_Tactic_Product__c.cgcloud__Payment_Tactic__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Payment_Tactic_Product__c.cgcloud__Product__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+</Profile>

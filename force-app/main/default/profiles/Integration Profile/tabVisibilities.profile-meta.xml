@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <tabVisibilities>
+        <tab>cgcloud__Custom_Calendar__c</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>TPM_Product_Hierarchy_Staging__c</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>TPM_Customer_Hierarchy_Staging__c</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>TPM_Approval__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>TPM_UI_Definition__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+</Profile>

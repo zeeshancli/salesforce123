@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Account_Plan_Category__c.cgcloud__Category__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Account_Plan_Category__c.cgcloud__Manual_Calculation_Input_2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Account_Plan_Category__c.cgcloud__Manual_Calculation_Input_3__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Account_Plan_Category__c.cgcloud__Manual_Calculation_Input__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Account_Plan_Category__c.cgcloud__Uniqueness_Check__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Account_Plan_Category__c.cgcloud__Version__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+</Profile>

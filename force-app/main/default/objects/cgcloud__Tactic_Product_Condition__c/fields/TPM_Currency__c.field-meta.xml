@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Currency__c</fullName>
+    <description>Currency of the condition</description>
+    <externalId>false</externalId>
+    <formula>TEXT( cgcloud__Tactic__r.TPM_Currency__c )</formula>
+    <label>Currency</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Manager_For_Approval_Level_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT( ISPICKVAL(TPM_ApprovalLevel__c, &quot;NA&quot;)),
+NOT( ISPICKVAL(TPM_ApprovalLevel__c, &quot;9&quot;)),
+ISBLANK(ManagerId) 
+)</errorConditionFormula>
+    <errorMessage>The manager field on the User Record is mandatory for all users with approval level less than 9 and NA.</errorMessage>
+</ValidationRule>

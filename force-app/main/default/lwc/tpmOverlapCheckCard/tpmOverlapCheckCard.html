@@ -1,0 +1,32 @@
+<template>
+    <div class="tpm-custom-box">
+        <cgcloud-tpm-promotion promotion-id={recordId} onpromotionchange={onPromotionChange} oneditmodechange={handleEditModeChange}></cgcloud-tpm-promotion>
+        <lightning-spinner if:true={isloading} ></lightning-spinner>
+            <template if:true={areDetailsVisible}>
+                <lightning-card>
+                    <div class={sectionClass}>
+                        <h3 class="slds-section__title">
+                            <button class="slds-button slds-section__title-action slds-p-left_small" onclick={handleSwitchClick}>
+                                    <lightning-icon icon-name="utility:switch" size="xx-small"
+                                        class="tpm-custom-accordian-icon  slds-button__icon slds-button__icon_center slds-button__icon_top slds-section__title-action-icon">
+                                    </lightning-icon>
+                                    <span class="tpm-custom-accordian-title slds-p-left_xx-small" title={overlapCheckTitle}>
+                                    {overlapCheckTitle}
+                                     </span>
+                            </button>
+                        </h3>
+                        <div class="slds-section__content">
+                            <lightning-datatable    
+                                    key-field="id"
+                                    data={promoData}
+                                    columns={columns}
+                                    hide-checkbox-column
+                                    resize-column-disabled
+                                    wrap-text-max-lines="500">
+                            </lightning-datatable>
+                        </div>
+                    </div>
+                </lightning-card>
+            </template>
+    </div>
+</template>

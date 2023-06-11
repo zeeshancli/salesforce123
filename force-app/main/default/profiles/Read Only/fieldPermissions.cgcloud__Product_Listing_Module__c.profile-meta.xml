@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Product_Listing_Module__c.cgcloud__Facing__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Product_Listing_Module__c.cgcloud__Listing_Module_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Product_Listing_Module__c.cgcloud__Price__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Product_Listing_Module__c.cgcloud__Product_Assortment_Product__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+</Profile>

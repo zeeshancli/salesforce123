@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+<types>
+    <members>cgcloud__Tactic__c.TPM_Child_ExternalID__c</members>
+    <members>cgcloud__Tactic__c.TPM_Tactic_ExternalId__c</members>
+    <members>cgcloud__Promotion__c.TPM_Promotion_ExternalId__c</members>
+     <members>cgcloud__Promotion__c.TPM_Child_ExternalId__c</members>
+    <members>User.TPM_Approval_Level__c</members>
+    <name>CustomField</name>
+</types>
+    <version>57.0</version>
+</Package>

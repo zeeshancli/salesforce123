@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>STESTAOIPerCase_US01</label>
+    <protected>false</protected>
+    <values>
+        <field>TPM_Measure_Code__c</field>
+        <value xsi:type="xsd:string">OITR</value>
+    </values>
+    <values>
+        <field>TPM_PaymentMethod__c</field>
+        <value xsi:type="xsd:string">OI</value>
+    </values>
+    <values>
+        <field>TPM_PromotionType__c</field>
+        <value xsi:type="xsd:string">Short Term Event</value>
+    </values>
+    <values>
+        <field>TPM_RateBasis__c</field>
+        <value xsi:type="xsd:string">PerCase</value>
+    </values>
+    <values>
+        <field>TPM_SalesOrg__c</field>
+        <value xsi:type="xsd:string">US01</value>
+    </values>
+    <values>
+        <field>TPM_TacticType__c</field>
+        <value xsi:type="xsd:string">Short Term Allowance</value>
+    </values>
+    <values>
+        <field>TPM_ZCode__c</field>
+        <value xsi:type="xsd:string">ZKB2</value>
+    </values>
+</CustomMetadata>

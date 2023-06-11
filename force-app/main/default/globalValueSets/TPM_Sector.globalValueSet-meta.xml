@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Europe</fullName>
+        <default>false</default>
+        <label>Europe</label>
+    </customValue>
+    <customValue>
+        <fullName>ASIA</fullName>
+        <default>false</default>
+        <label>ASIA</label>
+    </customValue>
+    <customValue>
+        <fullName>LA</fullName>
+        <default>false</default>
+        <label>LA</label>
+    </customValue>
+    <customValue>
+        <fullName>B2B</fullName>
+        <default>false</default>
+        <label>B2B</label>
+    </customValue>
+    <customValue>
+        <fullName>Portable power</fullName>
+        <default>false</default>
+        <label>Portable power</label>
+    </customValue>
+    <customValue>
+        <fullName>EA</fullName>
+        <default>false</default>
+        <label>EA</label>
+    </customValue>
+    <customValue>
+        <fullName>NA</fullName>
+        <default>false</default>
+        <label>NA</label>
+    </customValue>
+    <description>Sector of the customer</description>
+    <masterLabel>Sector</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

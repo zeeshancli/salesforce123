@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_PlnMdeChgFlag__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Determines whether or not the planning mode of the Account will be changed.</description>
+    <externalId>false</externalId>
+    <label>Planning Mode Changed Flag</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

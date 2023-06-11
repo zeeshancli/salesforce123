@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Promotion_ShipmentStartValidation</fullName>
+    <active>true</active>
+    <description>Validates if Shipment start date is greater than or equal to the current date</description>
+    <errorConditionFormula>ISPICKVAL(TPM_Phase__c  , &apos;Planning&apos;)&amp;&amp; cgcloud__Delivery_Date_From__c &lt; TODAY()</errorConditionFormula>
+    <errorMessage>Shipment Start Date must be greater than or equal to the current date</errorMessage>
+</ValidationRule>

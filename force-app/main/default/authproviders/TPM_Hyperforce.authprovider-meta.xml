@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authorizeUrl>https://test.salesforce.com/services/oauth2/authorize</authorizeUrl>
+    <consumerKey>3MVG91Cqi3bGIrUNzJFeloRAU5P9.Nzcb7MVqLHMxVdt2hrSL09Kuo_L3wbJEIpvNJZCFYnWH8CTeSkZdOEBH</consumerKey>
+    <consumerSecret>Placeholder_Value</consumerSecret>
+    <defaultScopes>full refresh_token offline_access</defaultScopes>
+    <friendlyName>TPM_Hyperforce</friendlyName>
+    <includeOrgIdInIdentifier>true</includeOrgIdInIdentifier>
+    <providerType>Salesforce</providerType>
+    <sendAccessTokenInHeader>false</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <sendSecretInApis>true</sendSecretInApis>
+    <tokenUrl>https://test.salesforce.com/services/oauth2/token</tokenUrl>
+</AuthProvider>

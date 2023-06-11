@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Account_Sales_Data__c.cgcloud__Month__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Account_Sales_Data__c.cgcloud__Record_Link__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Account_Sales_Data__c.cgcloud__Sales_Volume__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Account_Sales_Data__c.cgcloud__Year__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+</Profile>

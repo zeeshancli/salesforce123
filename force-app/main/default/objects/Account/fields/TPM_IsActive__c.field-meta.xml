@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_IsActive__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Determines whether or not the Account is currently active.</description>
+    <externalId>false</externalId>
+    <label>Active Flag</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

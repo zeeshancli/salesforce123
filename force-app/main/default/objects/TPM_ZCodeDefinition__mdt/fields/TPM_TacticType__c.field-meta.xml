@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_TacticType__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Tactic Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Logistic Discount</fullName>
+                <default>false</default>
+                <label>Logistic Discount</label>
+            </value>
+            <value>
+                <fullName>Distributor Discounts</fullName>
+                <default>false</default>
+                <label>Distributor Discounts</label>
+            </value>
+            <value>
+                <fullName>Consumer Price Reduction</fullName>
+                <default>false</default>
+                <label>Consumer Price Reduction</label>
+            </value>
+            <value>
+                <fullName>Consumer Price Reduction - Extra OI</fullName>
+                <default>false</default>
+                <label>Consumer Price Reduction - Extra OI</label>
+            </value>
+            <value>
+                <fullName>LTA</fullName>
+                <default>false</default>
+                <label>LTA</label>
+            </value>
+            <value>
+                <fullName>LTA - OI Extra</fullName>
+                <default>false</default>
+                <label>LTA - OI Extra</label>
+            </value>
+            <value>
+                <fullName>Display Shipper</fullName>
+                <default>false</default>
+                <label>Display Shipper</label>
+            </value>
+            <value>
+                <fullName>Cash Discounts</fullName>
+                <default>false</default>
+                <label>Cash Discounts</label>
+            </value>
+            <value>
+                <fullName>EDLP</fullName>
+                <default>false</default>
+                <label>EDLP</label>
+            </value>
+            <value>
+                <fullName>Placement Fees</fullName>
+                <default>false</default>
+                <label>Placement Fees</label>
+            </value>
+            <value>
+                <fullName>Short Term Allowance</fullName>
+                <default>false</default>
+                <label>Short Term Allowance</label>
+            </value>
+            <value>
+                <fullName>Data / Market Research</fullName>
+                <default>false</default>
+                <label>Data / Market Research</label>
+            </value>
+            <value>
+                <fullName>Displays and Fixtures</fullName>
+                <default>false</default>
+                <label>Displays and Fixtures</label>
+            </value>
+            <value>
+                <fullName>In-Store Merchandising Labor</fullName>
+                <default>false</default>
+                <label>In-Store Merchandising Labor</label>
+            </value>
+            <value>
+                <fullName>Other Sales Deductions</fullName>
+                <default>false</default>
+                <label>Other Sales Deductions</label>
+            </value>
+            <value>
+                <fullName>Shopper Marketing Agency</fullName>
+                <default>false</default>
+                <label>Shopper Marketing Agency</label>
+            </value>
+            <value>
+                <fullName>Shopper Marketing Execution</fullName>
+                <default>false</default>
+                <label>Shopper Marketing Execution</label>
+            </value>
+            <value>
+                <fullName>100% TPR</fullName>
+                <default>false</default>
+                <label>100% TPR</label>
+            </value>
+            <value>
+                <fullName>Digital Media</fullName>
+                <default>false</default>
+                <label>Digital Media</label>
+            </value>
+            <value>
+                <fullName>Influencer &amp; Professionals</fullName>
+                <default>false</default>
+                <label>Influencer &amp; Professionals</label>
+            </value>
+            <value>
+                <fullName>LTA Fixed</fullName>
+                <default>false</default>
+                <label>LTA Fixed</label>
+            </value>
+            <value>
+                <fullName>Stickering Fees</fullName>
+                <default>false</default>
+                <label>Stickering Fees</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

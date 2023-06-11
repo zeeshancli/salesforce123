@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Promotion</fullName>
+    <active>true</active>
+    <description>Promotion record type for Approval object</description>
+    <label>Promotion</label>
+    <picklistValues>
+        <picklist>TPM_Phase__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Committed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance edit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>For Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modeling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preparation</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TPM_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for Approval</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

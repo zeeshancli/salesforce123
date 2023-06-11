@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_MA_AccountNumber__c</fullName>
+    <description>Managed Account number for the condition</description>
+    <externalId>false</externalId>
+    <formula>cgcloud__Tactic__r.cgcloud__Promotion__r.cgcloud__Anchor_Account__r.AccountNumber</formula>
+    <label>Managed Account Number</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

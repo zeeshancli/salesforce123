@@ -1,0 +1,66 @@
+<template>
+    <div class="tpm-custom-box">
+
+        <!-- Use managed tpm-promotion component -->
+        <cgcloud-tpm-promotion promotion-id={recordId} 
+                               onpromotionchange={onPromotionChange} 
+                               oneditmodechange={handleEditModeChange} 
+                               onselectedtacticidchange={onTacticSelectionChange} 
+                               ontacticschange={handleOnTacticsChange}>
+        </cgcloud-tpm-promotion>
+        <lightning-card>
+
+            <!-- To show/hide accordian UI -->
+            <div class={sectionClass}>
+                <h3 class="slds-section__title">
+                    <button class="slds-button slds-section__title-action" onclick={handleSwitchClick}>
+                        <lightning-icon icon-name="utility:switch" size="x-small" 
+                                        class="tpm-custom-accordian-title slds-button__icon slds-button__icon_left slds-section__title-action-icon">
+                            <label></label>
+                        </lightning-icon>
+                        <span class="tpm-custom-accordian slds-truncate tpm-custom-accordian-title" title={accordianTitle}>
+                            {accordianTitle}
+                        </span>
+                        <span class="tpm-custom-accordian slds-required">
+                            *
+                        </span>
+                        <label></label>
+                    </button>
+                </h3>
+
+                <!-- Section content body -->
+                <div class="slds-section__content">
+
+                    <!-- If UI Definition JSON is found -->
+                    <template lwc:if={isSpinner}>
+                        <lightning-spinner alternative-text="Loading" 
+                                           variant="brand" 
+                                           size="small">
+                        </lightning-spinner>
+                    </template>
+                    <template lwc:else>
+                        <template lwc:if={isJSONAvailable}>
+
+                            <!-- Embedded tpmDynamicCardLayout component to display layout -->
+                            <c-tpm-dynamic-card-layout object-record-id={objectRecordId} 
+                                                       is-editable={isEditable} 
+                                                       is-add-tactic={isAddTactic} 
+                                                       obj-api-name={objApiName} 
+                                                       object-data-list={dataList} 
+                                                       obj-record-type-id={objRecordTypeId} 
+                                                       ontacticfieldupdate={handleTacticFieldUpdate}>
+                            </c-tpm-dynamic-card-layout>
+                        </template>
+    
+                        <!-- If no JSON is found -->
+                        <template lwc:else>
+                            <p class="slds-align_absolute-center">
+                                Invalid UI Definition. Please contact System Administrator
+                            </p>
+                        </template>
+                    </template>                  
+                </div>
+            </div>
+        </lightning-card>
+    </div>
+</template>

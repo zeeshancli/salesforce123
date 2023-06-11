@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_PromotionType__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Promotion Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Display Shipper</fullName>
+                <default>false</default>
+                <label>Display Shipper</label>
+            </value>
+            <value>
+                <fullName>EDLP</fullName>
+                <default>false</default>
+                <label>EDLP</label>
+            </value>
+            <value>
+                <fullName>LTA</fullName>
+                <default>false</default>
+                <label>LTA</label>
+            </value>
+            <value>
+                <fullName>Short Term Event</fullName>
+                <default>false</default>
+                <label>Short Term Event</label>
+            </value>
+            <value>
+                <fullName>Other Programs</fullName>
+                <default>false</default>
+                <label>Other Programs</label>
+            </value>
+            <value>
+                <fullName>Volume Push</fullName>
+                <default>false</default>
+                <label>Volume Push</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

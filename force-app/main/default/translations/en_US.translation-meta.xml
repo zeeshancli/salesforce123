@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <label>Status</label>
+        <name>cgcloud__AP_LBL_PROMOTION_PHASE</name>
+    </customLabels>
+    <customLabels>
+        <label>Should the [0] ebe removed</label>
+        <name>cgcloud__BPIS_MAX_NUMBER_OF_PROMOTIONBOAPI_PER_IMPORT</name>
+    </customLabels>
+    <customLabels>
+        <label>You do not have access to the Top Node product for the promotion.</label>
+        <name>cgcloud__CATEGORY_NOT_ACCESSIBLE</name>
+    </customLabels>
+    <customLabels>
+        <label>Top Node</label>
+        <name>cgcloud__CBP_LBL_CATEGORY</name>
+    </customLabels>
+    <customLabels>
+        <label>Error loading Sales Volume Forecast</label>
+        <name>cgcloud__CBP_LBL_ERROR_LOADING_GRID</name>
+    </customLabels>
+    <customLabels>
+        <label>UPC/EAN Selection</label>
+        <name>cgcloud__CBP_LBL_FOCUS</name>
+    </customLabels>
+    <customLabels>
+        <label>Unit of Measure</label>
+        <name>cgcloud__CBP_LBL_KPI_SUBSETS</name>
+    </customLabels>
+    <customLabels>
+        <label>You do not have permission to access this Sales Volume Forecast.</label>
+        <name>cgcloud__CBP_LBL_NO_ACCESS</name>
+    </customLabels>
+    <customLabels>
+        <label>There are too many months to expand. Please try again.</label>
+        <name>cgcloud__CBP_LBL_TOOLTIP_LOCK_COLUMN</name>
+    </customLabels>
+    <customLabels>
+        <label>Top Node</label>
+        <name>cgcloud__CBP_NEW_FIELD_LABEL_CATEGORIES</name>
+    </customLabels>
+    <customLabels>
+        <label>SVF Name</label>
+        <name>cgcloud__CBP_NEW_FIELD_LABEL_DESCRIPTION</name>
+    </customLabels>
+    <customLabels>
+        <label>The Sales Volume Forecast could not be created.</label>
+        <name>cgcloud__CBP_NEW_FIELD_NOTIFICATION_FAIL</name>
+    </customLabels>
+    <customLabels>
+        <label>Sales Volume Forecast was created.</label>
+        <name>cgcloud__CBP_NEW_FIELD_NOTIFICATION_SUCCESS</name>
+    </customLabels>
+    <customLabels>
+        <label>You must select at least one Top Node product. </label>
+        <name>cgcloud__CBP_NEW_FIELD_VALIDATION_CATEGORIES</name>
+    </customLabels>
+    <customLabels>
+        <label>Error loading Sales Volume Forecast</label>
+        <name>cgcloud__CBP_NOTIFICATION_TITLE_ERROR_GRID</name>
+    </customLabels>
+    <customLabels>
+        <label>The Account Plan ID is a required input. Please try again and contact your administrator if you have issues.</label>
+        <name>cgcloud__CBP_RECORD_ID_VALIDATION_ERROR</name>
+    </customLabels>
+    <customLabels>
+        <label>Promotion Name</label>
+        <name>cgcloud__CPC_SLOGAN</name>
+    </customLabels>
+    <customLabels>
+        <label>Are you sure you want to delete this product in this promotion?</label>
+        <name>cgcloud__DELETE_PROMOTION_PRODUCT</name>
+    </customLabels>
+    <customLabels>
+        <label>You cannot open this Promotion because the customer is in a different Sales Org than your user.</label>
+        <name>cgcloud__ERROR_PROMOTION_USER_INVALID_SALES_ORG</name>
+    </customLabels>
+    <customLabels>
+        <label>You do not have sufficient access to view this record.</label>
+        <name>cgcloud__ERR_PSP_USER_HAS_NO_PERMISSION</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code = Parsing JSON)</label>
+        <name>cgcloud__Error_Parsing_JSON</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code = Invalid Attribute Name)</label>
+        <name>cgcloud__INVALID_ATTRIBUTE_NAME</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code = Invalid Import ID)</label>
+        <name>cgcloud__INVALID_IMPORT_ID</name>
+    </customLabels>
+    <customLabels>
+        <label>The filters selected are invalid. Please try again and contact your Administrator if you have further issues.</label>
+        <name>cgcloud__INVALID_PROMOTION_FILTERS</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code = JSON Structure)</label>
+        <name>cgcloud__INVALID_PROMOTION_JSON</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code = Lookup not supported)</label>
+        <name>cgcloud__Lookup_type_not_supported</name>
+    </customLabels>
+    <customLabels>
+        <label>There was an error in copying this promotion. You do not have access to the top node product for this anchor customer.</label>
+        <name>cgcloud__MASS_PROMOTION_COPY_NOT_ACCESS_CATEGORY</name>
+    </customLabels>
+    <customLabels>
+        <label>There was an error in copying this promotion. The customer of the promotion does not have a valid promotion role for the complete timeframe of the target promotion.</label>
+        <name>cgcloud__MASS_PROMOTION_COPY_NOT_ACCESS_CUSTOMER</name>
+    </customLabels>
+    <customLabels>
+        <label>There was an error in copying this promotion. This promotion cannot be copied.</label>
+        <name>cgcloud__MASS_PROMOTION_COPY_NOT_COPYABLE</name>
+    </customLabels>
+    <customLabels>
+        <label>There was an error in copying this promotion. Your user and the promotion template must be in the same Sales Org.</label>
+        <name>cgcloud__MASS_PROMOTION_COPY_NOT_SALESORG</name>
+    </customLabels>
+    <customLabels>
+        <label>Top Nodes</label>
+        <name>cgcloud__MULTIPICKLIST_CATEGORIES</name>
+    </customLabels>
+    <customLabels>
+        <label>You must be an active Product Manager for at least one Top Node to create this record. Please contact your administrator.</label>
+        <name>cgcloud__NO_CATEGORY_ACCESS</name>
+    </customLabels>
+    <customLabels>
+        <label>You do not have permission to create this record.</label>
+        <name>cgcloud__NO_CREATE_PERMISSION_FOR_RECORD</name>
+    </customLabels>
+    <customLabels>
+        <label>You are not allowed to delete this Sales Volume Forecast since the year has already started.</label>
+        <name>cgcloud__NO_DELETE_ACCOUNT_PLAN</name>
+    </customLabels>
+    <customLabels>
+        <label>You are not allowed to delete the Top Node associated with a Sales Volume Forecast.</label>
+        <name>cgcloud__NO_DELETE_ACCOUNT_PLAN_CATEGORY</name>
+    </customLabels>
+    <customLabels>
+        <label>You do not have permission to delete this record.</label>
+        <name>cgcloud__NO_DELETE_PERMISSION_FOR_RECORD</name>
+    </customLabels>
+    <customLabels>
+        <label>You do not have permission to edit this record.</label>
+        <name>cgcloud__NO_EDIT_PERMISSION_FOR_RECORD</name>
+    </customLabels>
+    <customLabels>
+        <label>There are no KPIs defined for this Sales Volume Forecast. Please contact your administrator to address the issue in the Customer Template as a KPI Set must be defined when the SVF is created.</label>
+        <name>cgcloud__NO_KPISET_CONFIGURED</name>
+    </customLabels>
+    <customLabels>
+        <label>You do not have permission to view this record.</label>
+        <name>cgcloud__NO_PERMISSION_FOR_RECORD</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code = No BO API Transaction Records found)</label>
+        <name>cgcloud__NO_PROMOTION_BO_API_TRANSACTION_RECORD</name>
+    </customLabels>
+    <customLabels>
+        <label>User can&apos;t create a Promotion if the Promotion doesn&apos;t have a Top Node.</label>
+        <name>cgcloud__NO_PROMOTION_SAVE_WITH_OUT_CATEGORY</name>
+    </customLabels>
+    <customLabels>
+        <label>You are not allowed to restore Sales Volume Forecasts.</label>
+        <name>cgcloud__NO_UNDELETE_ACCOUNT_PLAN</name>
+    </customLabels>
+    <customLabels>
+        <label>There is no KPI Set defined for this promotion template.</label>
+        <name>cgcloud__No_Kpi_Set</name>
+    </customLabels>
+    <customLabels>
+        <label>You do not have permission to view this record.</label>
+        <name>cgcloud__NO_VIEW_PERMISSION_FOR_RECORD</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code = Other Custom Exception)</label>
+        <name>cgcloud__OTHER_CUSTOM_EXCEPTION</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code = Object Type cannot be null)</label>
+        <name>cgcloud__PBACU_NULL_OBJECTTYPE</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code = cast field error)</label>
+        <name>cgcloud__PBACU_UNABLE_TO_CAST</name>
+    </customLabels>
+    <customLabels>
+        <label>Components cannot be linked to the header because the Display Shipper header cannot be found.</label>
+        <name>cgcloud__PBACWS_MANUAL_INPUT_PRODUCT_PART_RELATION_NOT_FOUND</name>
+    </customLabels>
+    <customLabels>
+        <label>Error in creating Pricing Condition. Please contact your administrator. (Error Code: Tactic load before copying TCCD)</label>
+        <name>cgcloud__PBACWS_TACTIC_REQUIRED_FOR_COPYTCCD</name>
+    </customLabels>
+    <customLabels>
+        <label>Error in creating Pricing Condition. Please contact your administrator. (Error Code: Missing SourceKPI)</label>
+        <name>cgcloud__PBACWS_TCCD_REQUIRED_SOURCEKPI</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code = unrecognized action)</label>
+        <name>cgcloud__PBACWS_UNRECOGNIZED_ACTION</name>
+    </customLabels>
+    <customLabels>
+        <label>No entries were found.</label>
+        <name>cgcloud__PC_LBL_NO_ITEMS_FOUND</name>
+    </customLabels>
+    <customLabels>
+        <label>You can’t copy the promotion because you don’t have access to the top node product related to the promotion.</label>
+        <name>cgcloud__PC_LBL_NO_TARGET_ACCOUNT</name>
+    </customLabels>
+    <customLabels>
+        <label>You can’t derive the promotion because you don’t have access to the top node product related to the promotion.</label>
+        <name>cgcloud__PC_LBL_NO_TARGET_ACCOUNT_DERIVE</name>
+    </customLabels>
+    <customLabels>
+        <label>Promotion Type</label>
+        <name>cgcloud__PC_LBL_PROMOTION_TEMPLATE</name>
+    </customLabels>
+    <customLabels>
+        <label>Something went wrong, please try again later. If issue persists, contact your Administrator. (Error Code: PPM_ERROR_DURING_SAVE)</label>
+        <name>cgcloud__PPM_ERROR_DURING_SAVE</name>
+    </customLabels>
+    <customLabels>
+        <label>Something went wrong, please try again later. If issue persists, contact your Administrator. (Error Code: PPM_ERROR_STATE_SUBTITLE)</label>
+        <name>cgcloud__PPM_ERROR_STATE_SUBTITLE</name>
+    </customLabels>
+    <customLabels>
+        <label>Something went wrong, please try again later. If issue persists, contact your Administrator. (Error Code: PPM_ERROR_STATE_TITLE)</label>
+        <name>cgcloud__PPM_ERROR_STATE_TITLE</name>
+    </customLabels>
+    <customLabels>
+        <label>Something went wrong, please try again later. If issue persists, contact your Administrator. (Error Code: PPM_LBL_MULTIPICKLIST_VALIDATION_ERROR)</label>
+        <name>cgcloud__PPM_LBL_MULTIPICKLIST_VALIDATION_ERROR</name>
+    </customLabels>
+    <customLabels>
+        <label>Your product was successfully replaced.</label>
+        <name>cgcloud__PPM_NOTIFICATION_PRODUCT_REPLACED</name>
+    </customLabels>
+    <customLabels>
+        <label>Product was added</label>
+        <name>cgcloud__PPM_NOTIFICATION_SINGLE_PRODUCT_ADDED</name>
+    </customLabels>
+    <customLabels>
+        <label>Product was deleted</label>
+        <name>cgcloud__PPM_NOTIFICATION_SINGLE_PRODUCT_DELETED</name>
+    </customLabels>
+    <customLabels>
+        <label>Please refresh the page and try again.</label>
+        <name>cgcloud__PPM_RELOAD_PAGE</name>
+    </customLabels>
+    <customLabels>
+        <label>You cannot delete the promotion product if status is Cancelled or Planning.</label>
+        <name>cgcloud__PP_DELETE_VALIDATION_ERROR</name>
+    </customLabels>
+    <customLabels>
+        <label>Drag attachments here or select</label>
+        <name>cgcloud__PP_LBL_DRAG_ATTACHMENTS</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code: Promotion EARights)</label>
+        <name>cgcloud__PP_LBL_ERROR_PROMOTION_CUSTOM_EARIGHTS</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code: Tactic EARights)</label>
+        <name>cgcloud__PP_LBL_ERROR_TACTIC_CUSTOM_EARIGHTS</name>
+    </customLabels>
+    <customLabels>
+        <label>Top Node </label>
+        <name>cgcloud__PP_LBL_PROMOTION_CATEGORY</name>
+    </customLabels>
+    <customLabels>
+        <label>An error occurred while trying to save the promotion. Please try again later or contact your Administrator (Error Code: PP_LBL_SAVING_ERROR)</label>
+        <name>cgcloud__PP_LBL_SAVING_ERROR</name>
+    </customLabels>
+    <customLabels>
+        <label>Error saving promotion. Please try again later or contact your Administrator if issue persists. (Error Code: PP_TIT_SAVING_ERROR)</label>
+        <name>cgcloud__PP_TIT_SAVING_ERROR</name>
+    </customLabels>
+    <customLabels>
+        <label>Error uploading attachment. Please try again later or contact your Administrator if issue persists.</label>
+        <name>cgcloud__PP_TIT_UPLOAD_ATTACHMENT_ERROR</name>
+    </customLabels>
+    <customLabels>
+        <label>Error with promotion. Please try again later or contact your Administrator if issue persists.</label>
+        <name>cgcloud__PRM_CUSTOM_EXCEPTION</name>
+    </customLabels>
+    <customLabels>
+        <label>Products can't be deleted if the Promotion Status is 'Planning' or 'Cancelled'.</label>
+        <name>cgcloud__PROMOTIONPRD_NON_DELETABLE</name>
+    </customLabels>
+    <customLabels>
+        <label>You don’t have permissions for this combination of customer/top node, please modify your filters.</label>
+        <name>cgcloud__Promotion_Access_Definition_Policy_Error</name>
+    </customLabels>
+    <customLabels>
+        <label>Customer</label>
+        <name>cgcloud__PROMOTION_ANCHOR</name>
+    </customLabels>
+    <customLabels>
+        <label>Error with promotion attachment. Please try again later or contact your Administrator if issue persists.</label>
+        <name>cgcloud__PROMOTION_ATTACHMENT_LINK_CUSTOM_EXCEPTION</name>
+    </customLabels>
+    <customLabels>
+        <label>You must select at least one Top Node to the Promotion.</label>
+        <name>cgcloud__PROMOTION_CATEGORY_SHARE_ERROR</name>
+    </customLabels>
+    <customLabels>
+        <label>You must be an active manager for at least one Top Node to create this record.</label>
+        <name>cgcloud__PROMOTION_ERROR_CATEGORY</name>
+    </customLabels>
+    <customLabels>
+        <label>You must be an active manager for at least one Top Node to create this record.</label>
+        <name>cgcloud__PROMOTION_ERROR_MANAGER</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code: Promotion External ID Limit)</label>
+        <name>cgcloud__PROMOTION_EXCEEDED_EXTID_SIZE</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code: Promo Input JSON limit)</label>
+        <name>cgcloud__PROMOTION_EXCEEDED_MAX_PROMO_SIZE</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code: Invalid recordID)</label>
+        <name>cgcloud__PROMOTION_INVALID_RECORD_ID</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code: BO API payload limit)</label>
+        <name>cgcloud__PROMOTION_MAX_PAYLOAD_SIZE</name>
+    </customLabels>
+    <customLabels>
+        <label>Promotion can't be deleted if the Status is 'Planning'.</label>
+        <name>cgcloud__PROMOTION_NON_DELETABLE</name>
+    </customLabels>
+    <customLabels>
+        <label>Promotion can't be edited if the Status is 'Planning' or 'Cancelled'.</label>
+        <name>cgcloud__PROMOTION_NON_EDITABLE</name>
+    </customLabels>
+    <customLabels>
+        <label>This promotion has not been synced. Please try again.</label>
+        <name>cgcloud__PROMOTION_NOT_FOUND_WEBSERVICE</name>
+    </customLabels>
+    <customLabels>
+        <label>You cannot copy this promotion.</label>
+        <name>cgcloud__PROMOTION_NO_COPYABLE</name>
+    </customLabels>
+    <customLabels>
+        <label>You don't have permissions to Delete this promotion.</label>
+        <name>cgcloud__PROMOTION_NO_DELETE_PERMISSION</name>
+    </customLabels>
+    <customLabels>
+        <label>You don't have permissions to Edit this promotion.</label>
+        <name>cgcloud__PROMOTION_NO_EDIT_PERMISSION</name>
+    </customLabels>
+    <customLabels>
+        <label>You do not have permission to view this promotion.</label>
+        <name>cgcloud__PROMOTION_NO_VIEW_PERMISSION</name>
+    </customLabels>
+    <customLabels>
+        <label>Months</label>
+        <name>cgcloud__PROMOTION_PERIODS</name>
+    </customLabels>
+    <customLabels>
+        <label>Promotion Phase can't be edited to 'Draft'.</label>
+        <name>cgcloud__PROMOTION_PHASE_PREPARATION_NOT_VALID</name>
+    </customLabels>
+    <customLabels>
+        <label>Promotion Type</label>
+        <name>cgcloud__Promotion_Template</name>
+    </customLabels>
+    <customLabels>
+        <label>There is an issue with your push promotion. Please contact your Administrator. (Error Code: Parent/Child must have same Product Definition Policy)</label>
+        <name>cgcloud__PT_LBL_ERROR_MSG_PRODPOLICY_TYPE_MUST_MATCH_CHILD_AND_PARENTPT</name>
+    </customLabels>
+    <customLabels>
+        <label>There is an issue with your push promotion. Please contact your Administrator. (Error Code: Parent/Child must have type as 'Promotion')</label>
+        <name>cgcloud__PT_LBL_ERROR_MSG_PROMOTION_TYPE_MUST_BE_PROMOTION_CHILD_AND_PARENT_PUSH</name>
+    </customLabels>
+    <customLabels>
+        <label>There is an issue with your push promotion. Please contact your Administrator. (Error Code: Parent/Child must have the same promotion type to derive)</label>
+        <name>cgcloud__PT_LBL_ERROR_MSG_PROMOTION_TYPE_MUST_MATCH_CHILD_AND_PARENT_DERIVE</name>
+    </customLabels>
+    <customLabels>
+        <label>There is an issue with your push promotion. Please contact your Administrator. (Error Code: Parent/Child must have the same sales org)</label>
+        <name>cgcloud__PT_LBL_ERROR_MSG_SALESORG_MUST_MATCH_CHILD_AND_PARENT</name>
+    </customLabels>
+    <customLabels>
+        <label>There is an issue with your push promotion. Please contact your Administrator. (Error Code: Parent and Child must have UI as "SmartUI")</label>
+        <name>cgcloud__PT_LBL_ERROR_MSG_UI_TYPE_MUST_BE_SMARTUI_CHILD_AND_PARENT_PUSH</name>
+    </customLabels>
+    <customLabels>
+        <label>There is an issue with your push promotion. Please contact your Administrator. (Error Code: Must have same UI Type to Derive)</label>
+        <name>cgcloud__PT_LBL_ERROR_MSG_UI_TYPE_MUST_MATCH_CHILD_AND_PARENT_DERIVE</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code: Off-platform calculation timed out)</label>
+        <name>cgcloud__SCUD_ADHOC_TRANSACTION_TIMEOUT_ERROR</name>
+    </customLabels>
+    <customLabels>
+        <label>Promotion Status:</label>
+        <name>cgcloud__Selection_Grid_Filter_Label_Promotion_Phase</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code: SPC_MULTI_PROMO_CREATE_ERROR_TITLE)</label>
+        <name>cgcloud__SPC_MULTI_PROMO_CREATE_ERROR_TITLE</name>
+    </customLabels>
+    <customLabels>
+        <label>Promotion was processed successfully</label>
+        <name>cgcloud__SPC_MULTI_PROMO_CREATE_SUCCESS_TITLE</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code: SPC_SINGLE_PROMO_CREATE_ERROR_TITLE)</label>
+        <name>cgcloud__SPC_SINGLE_PROMO_CREATE_ERROR_TITLE</name>
+    </customLabels>
+    <customLabels>
+        <label>Promotion was processed successfully</label>
+        <name>cgcloud__SPC_SINGLE_PROMO_CREATE_SUCCESS_TITLE</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code: Workflow does not exist)</label>
+        <name>cgcloud__WORKFLOW_NOT_EXIST</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code: Workflow required)</label>
+        <name>cgcloud__WORKFLOW_REQUIRED</name>
+    </customLabels>
+    <customLabels>
+        <label>There has been a system error, please try again and contact your Administrator if you have further issues. (Error Code = Application Limit Error)</label>
+        <name>cgcloud__APPLICATION_LIMIT_ERROR</name>
+    </customLabels>
+</Translations>

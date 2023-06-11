@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Rejected_Reason_Code__c</fullName>
+    <description>Rejected Reason Code</description>
+    <externalId>false</externalId>
+    <label>Rejected Reason Code</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Reason 1</fullName>
+                <default>false</default>
+                <label>Authorized Return</label>
+            </value>
+            <value>
+                <fullName>Reason 2</fullName>
+                <default>false</default>
+                <label>Automatic Write-Off of less than $50</label>
+            </value>
+            <value>
+                <fullName>Reason 3</fullName>
+                <default>false</default>
+                <label>Damages</label>
+            </value>
+            <value>
+                <fullName>Reason 4</fullName>
+                <default>false</default>
+                <label>Freight Claim</label>
+            </value>
+            <value>
+                <fullName>Reason 5</fullName>
+                <default>false</default>
+                <label>Post Audit</label>
+            </value>
+            <value>
+                <fullName>Reason 6</fullName>
+                <default>false</default>
+                <label>Pricing Errors</label>
+            </value>
+            <value>
+                <fullName>Reason 7</fullName>
+                <default>false</default>
+                <label>Rejected-Charge back to customer</label>
+            </value>
+            <value>
+                <fullName>Reason 8</fullName>
+                <default>false</default>
+                <label>Transfer to Broker</label>
+            </value>
+            <value>
+                <fullName>Reason 9</fullName>
+                <default>false</default>
+                <label>UCD - Unearned Cash Discount</label>
+            </value>
+            <value>
+                <fullName>Reason 10</fullName>
+                <default>false</default>
+                <label>Other Reason</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

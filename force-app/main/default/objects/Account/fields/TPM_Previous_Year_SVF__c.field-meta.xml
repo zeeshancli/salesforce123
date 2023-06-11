@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Previous_Year_SVF__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup for SVF based on Previous business year</description>
+    <externalId>false</externalId>
+    <label>Previous Year SVF</label>
+    <referenceTo>cgcloud__Account_Plan__c</referenceTo>
+    <relationshipLabel>Accounts</relationshipLabel>
+    <relationshipName>Accounts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

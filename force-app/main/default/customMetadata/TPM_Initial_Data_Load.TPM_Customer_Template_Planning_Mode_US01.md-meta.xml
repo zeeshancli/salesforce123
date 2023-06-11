@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Customer Template Planning Mode US01</label>
+    <protected>false</protected>
+    <values>
+        <field>TPM_Available_Product_Level__c</field>
+        <value xsi:type="xsd:string">{&quot;Basic&quot;:&quot;SubCategory;Brand;Flavor;Package&quot;,
+&quot;Intermediate&quot;:&quot;SubCategory;Brand;Flavor;Package&quot;,&quot;General&quot;:&quot;SubCategory;Brand;Flavor;Package&quot;}</value>
+    </values>
+    <values>
+        <field>TPM_Configuration__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Customer_Template_Planning_Mode__c</field>
+        <value xsi:type="xsd:string">Basic;Intermediate;General</value>
+    </values>
+    <values>
+        <field>TPM_Friday__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Initial_Roles__c</field>
+        <value xsi:type="xsd:string">{&quot;Basic&quot;:&quot;customer;payer&quot;,
+&quot;Intermediate&quot;:&quot;customer;payer&quot;,
+&quot;General&quot;:&quot;customer;payer&quot;}</value>
+    </values>
+    <values>
+        <field>TPM_Monday__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_No_of_years__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_ObjectName__c</field>
+        <value xsi:type="xsd:string">cgcloud__Account_Template__c</value>
+    </values>
+    <values>
+        <field>TPM_Sales_Org__c</field>
+        <value xsi:type="xsd:string">US01</value>
+    </values>
+    <values>
+        <field>TPM_Saturday__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Start_Year__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Sunday__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Thursday__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Tuesday__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Wednesday__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

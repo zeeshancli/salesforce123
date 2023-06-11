@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_RateBasis__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Rate Basis</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>LumpSum</fullName>
+                <default>false</default>
+                <label>LumpSum</label>
+            </value>
+            <value>
+                <fullName>WeeklyLumpSum</fullName>
+                <default>false</default>
+                <label>WeeklyLumpSum</label>
+            </value>
+            <value>
+                <fullName>PerCase</fullName>
+                <default>false</default>
+                <label>PerCase</label>
+            </value>
+            <value>
+                <fullName>Percentage</fullName>
+                <default>false</default>
+                <label>Percentage</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

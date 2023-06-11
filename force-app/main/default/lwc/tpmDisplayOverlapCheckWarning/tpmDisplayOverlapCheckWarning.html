@@ -1,0 +1,40 @@
+<template>
+  <!-- Use managed tpm-promotion component -->
+<cgcloud-tpm-promotion promotion-id={recordId} onpromotionchange={onPromotionChange}  onstatuschange={onStatuschange} oneditmodechange={handleEditModeChange}></cgcloud-tpm-promotion>
+<!-- To show/hide error message for Overlap-->
+  <template if:true={overLapcheckFlag}>
+    <div class="slds-notify slds-notify_alert slds-alert_warning" role="alert">
+      <span class = "slds-text-heading_small slds-p-right_medium">
+          <lightning-icon icon-name="utility:warning" alternative-text="Warning!" title="Warning"  size="small"></lightning-icon>
+    </span>
+    <h2 class = "outputFont">{overlapMessage}</h2>
+    </div>
+  </template>
+
+  <template if:true={overLapcheckFlagProgress}>
+    <div class="slds-notify slds-notify_alert slds-alert_warning" role="alert">
+      <span class = "slds-text-heading_small slds-p-right_medium">
+          <lightning-icon icon-name="utility:warning" alternative-text="Warning!" title="Warning"  size="small"></lightning-icon>
+    </span>
+    <h2 class = "outputFont">{overlapMessageProgress}</h2>
+    </div>
+  </template>
+
+  <template if:true={overLapcheckFlagParentPush}>
+    <div class="slds-notify slds-notify_alert slds-alert_warning" role="alert">
+      <span class = "slds-text-heading_small slds-p-right_medium">
+          <lightning-icon icon-name="utility:warning" alternative-text="Warning!" title="Warning"  size="small"></lightning-icon>
+    </span>
+    <h2 class = "outputFont">{overLapPush}</h2>
+    </div>
+  </template>
+
+  <template if:true={overLapcheckFlagParentPushFail}>
+    <div class="slds-notify slds-notify_alert slds-alert_warning" role="alert">
+      <span class = "slds-text-heading_small slds-p-right_medium">
+          <lightning-icon icon-name="utility:warning" alternative-text="Warning!" title="Warning"  size="small"></lightning-icon>
+    </span>
+    <h2 class = "outputFont">{overLapFail}</h2>
+    </div>
+  </template>
+</template>

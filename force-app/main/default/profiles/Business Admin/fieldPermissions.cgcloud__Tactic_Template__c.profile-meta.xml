@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>cgcloud__Tactic_Template__c.TPM_UI_Definition__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Tactic_Template__c.TPM_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Tactic_Template__c.TPM_Tactic_Template_Classification__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+</Profile>

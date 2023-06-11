@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Tactic_InstoreStartValidation</fullName>
+    <active>true</active>
+    <description>Instore start date must be greater than or equal to today</description>
+    <errorConditionFormula>ISPICKVAL(cgcloud__Promotion__r.TPM_Phase__c,&apos;Planning&apos;)&amp;&amp;  cgcloud__Instore_Date_From__c  &lt; TODAY()</errorConditionFormula>
+    <errorMessage>Instore Start Date must be greater than or equal to the current date</errorMessage>
+</ValidationRule>

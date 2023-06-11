@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Sales_Org__c</fullName>
+    <description>Sales Orgs that user has access to</description>
+    <externalId>false</externalId>
+    <label>Available Sales Organization</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>cgcloud__Sales_Org</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

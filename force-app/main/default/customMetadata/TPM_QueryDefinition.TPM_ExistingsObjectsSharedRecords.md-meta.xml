@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>TPM_ExistingsObjectsSharedRecords</label>
+    <protected>false</protected>
+    <values>
+        <field>TPM_BaseQuery__c</field>
+        <value xsi:type="xsd:string">SELECT Id, ParentId, UserOrGroupId, AccessLevel FROM</value>
+    </values>
+    <values>
+        <field>TPM_BatchSize__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_ProcessName__c</field>
+        <value xsi:type="xsd:string">TPM_ExistingsObjectsSharedRecords</value>
+    </values>
+    <values>
+        <field>TPM_QueryCondition__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Query_Footer__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

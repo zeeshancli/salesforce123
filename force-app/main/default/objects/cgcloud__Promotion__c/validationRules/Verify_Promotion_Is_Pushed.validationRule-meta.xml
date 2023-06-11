@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verify_Promotion_Is_Pushed</fullName>
+    <active>false</active>
+    <description>For pushable promotions, validating that promotion is pushed at least once before moving to Planning/Submit for approval</description>
+    <errorConditionFormula>(ISPICKVAL(TPM_Phase__c, &apos;Planning&apos;) || ISPICKVAL(TPM_Phase__c, &apos;Submitted For Approval&apos;)) &amp;&amp;  (cgcloud__Sync_Relevant_Changes__c = true) &amp;&amp; (cgcloud__Is_Push_In_Progress__c = true) &amp;&amp; (cgcloud__Promotion_Template__r.Name =&apos;Parent_LTA_IT01&apos; ||
+cgcloud__Promotion_Template__r.Name =&apos;Parent_OtherPrograms_IT01&apos; || cgcloud__Promotion_Template__r.Name =&apos;Parent_ShortTermEvent_IT01&apos; || cgcloud__Promotion_Template__r.Name =&apos;Parent_VolumePush_IT01&apos;)</errorConditionFormula>
+    <errorMessage>Before switching the phase, you have to push down the latest changes in the promotion.</errorMessage>
+</ValidationRule>

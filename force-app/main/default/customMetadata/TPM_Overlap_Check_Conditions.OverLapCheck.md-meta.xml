@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OverLapCheck</label>
+    <protected>false</protected>
+    <values>
+        <field>Promotion_Template__c</field>
+        <value xsi:type="xsd:string">DisplayShipper_Basic_IT01;DisplayShipper_Basic_US01;DisplayShipper_Intermediate_IT01;DisplayShipper_Intermediate_US01;EDLP_Basic_US01;EDLP_Intermediate_US01;ShortTermEvent_Basic_IT01;ShortTermEvent_Basic_US01;ShortTermEvent_Intermediate_IT01;ShortTermEvent_Intermediate_US01</value>
+    </values>
+    <values>
+        <field>TPM_PhaseForOverlapCheck__c</field>
+        <value xsi:type="xsd:string">Planning;Submitted For Approval;Approved</value>
+    </values>
+    <values>
+        <field>TPM_PromotionFieldsOverlapHide__c</field>
+        <value xsi:type="xsd:string">cgcloud__Delivery_Date_From__c;cgcloud__Delivery_Date_Thru__c;cgcloud__Placement_Date_From__c;cgcloud__Placement_Date_Thru__c</value>
+    </values>
+    <values>
+        <field>TPM_TacticFieldsOverlapHide__c</field>
+        <value xsi:type="xsd:string">cgcloud__Instore_Date_From__c;cgcloud__Instore_Date_Thru__c;cgcloud__Shipment_Date_From__c;cgcloud__Shipment_Date_Thru__c</value>
+    </values>
+    <values>
+        <field>Tactic_Type__c</field>
+        <value xsi:type="xsd:string">LTA - OI Extra;100% TPR;Cash Discounts;Logistic Discount;Logistic Discount;Placement Fees;Display Shipper</value>
+    </values>
+</CustomMetadata>

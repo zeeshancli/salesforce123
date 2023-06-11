@@ -1,0 +1,22 @@
+.tpm-custom-box{
+    padding-bottom: 12px;
+}
+
+.tpm-custom-accordian-title{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #16325c;
+}
+.slds-section__title-action{
+    background: transparent;
+}
+.slds-section__title-action:hover{
+    background: transparent;
+}
+.slds-button:active{
+    border-color: transparent;
+}
+.slds-button:focus{
+    box-shadow: none;
+}

@@ -1,0 +1,71 @@
+<template>
+    <template if:true={isloadCmp}>
+
+    <lightning-card>
+        <lightning-accordion allow-multiple-sections-open>
+
+                         <lightning-accordion-section name="parCustomers" label={totalCustomerLabel} class="slds-p-left_none" style="text-decoration:none">
+                            <!--<div>-->
+                                <table class="slds-table slds-table_bordered slds-table_striped">
+                                    <thead>
+                                        <tr class="slds-line-height_reset">
+                                            <th class="" scope="col" style="width: 2%">
+                                                
+                                            </th>
+                                            
+                                            <th class="" scope="col" style="width: 8%">
+                                                Customer Number
+                                            </th>
+                                            <th class="" scope="col" style="width: 30%">
+                                                Account Name    
+                                            </th>   
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <template for:each={accLst} for:item="accDetail">
+                                            <tr class="slds-hint-parent" key={accDetail.externalId}>
+                                            <template lwc:if={accDetail.childRecordCreated}>
+                                                <td data-label="Spec File" class="mytd">
+                                                    <input type="checkbox" name="myTextEditBox" disabled="" checked={accDetail.pushedFlag} style="width:15px;height:15px;"/>&nbsp;&nbsp;
+                                                    <a href={accDetail.promotionLink}
+                                                    target="_blank"><lightning-icon icon-name="utility:new_window" alternative-text="Go to child Promo" class="my-icon" title="Warning" size="xx-small"></lightning-icon></a>
+                                                    
+
+                                                    
+                                                </td>
+                                            </template>
+                                            <template lwc:else>
+                                                <td data-label="Spec File" class="mytd">
+                                                    <input type="checkbox" name="myTextEditBox" disabled="" checked={accDetail.pushedFlag} style="width:15px;height:15px;"/>&nbsp;&nbsp;
+                                                    
+                                                </td>
+                                                </template>
+                                                
+                                                
+                                                <td data-label="Spec File" class="mytd">
+                                                    <div class="slds-cell-wrap"></div>
+                                                </td>
+                                                <td data-label="Spec File" class="mytd">
+                                                   
+                                                   <div class="slds-cell-wrap">
+                                                    <a href={accDetail.accountLink}
+                                                   target="_blank">{accDetail.accountName}</a>
+                                                   </div>
+                                                    
+                                                </td>
+                                                
+                                            </tr>
+                                        </template>
+                                    </tbody>
+                                </table>
+                             
+                        </lightning-accordion-section>
+                        </lightning-accordion>
+
+
+
+     </lightning-card>
+     </template>
+    <br/>
+</template>

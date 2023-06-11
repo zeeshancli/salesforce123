@@ -1,0 +1,164 @@
+{
+    "measures": [
+        {
+            "measurecode": "PPTS",
+            "tac": "a37790000001j2GAAQ",
+            "prd": "AA_Batteries",
+            "from": "202510",
+            "value": [
+                0,
+                0
+            ]
+        },
+        {
+            "measurecode": "PPTS",
+            "tac": "a37790000001j2GAAQ",
+            "prd": "BomProd1",
+            "from": "202510",
+            "value": [
+                0,
+                0
+            ]
+        },
+        {
+            "measurecode": "PPTS",
+            "tac": "a37790000001j2GAAQ",
+            "prd": "BOMProd2",
+            "from": "202510",
+            "value": [
+                0,
+                0
+            ]
+        },
+        {
+            "measurecode": "PPTS",
+            "tac": "a37790000001j2GAAQ",
+            "prd": "ProdPart1",
+            "from": "202510",
+            "value": [
+                0,
+                0
+            ]
+        },
+        {
+            "measurecode": "PPTS",
+            "tac": "a37790000001j2GAAQ",
+            "prd": "ProdPart2",
+            "from": "202510",
+            "value": [
+                0,
+                0
+            ]
+        },
+        {
+            "measurecode": "PPTS",
+            "tac": "a37790000001j2GAAQ",
+            "prd": "ProdPart3",
+            "from": "202510",
+            "value": [
+                0,
+                0
+            ]
+        },
+        {
+            "measurecode": "PPTS",
+            "tac": "a37790000001j2GAAQ",
+            "prd": "",
+            "from": "202510",
+            "value": [
+                0,
+                0
+            ]
+        },
+        {
+            "measurecode": "PPTS",
+            "tac": "",
+            "prd": "",
+            "from": "202510",
+            "value": [
+                0,
+                0
+            ]
+        },
+        {
+            "measurecode": "PTSV",
+            "tac": "",
+            "prd": "AA_Batteries",
+            "from": "202510",
+            "value": [
+                0,
+                0
+            ]
+        },
+        {
+            "measurecode": "PTSV",
+            "tac": "",
+            "prd": "BomProd1",
+            "from": "202510",
+            "value": [
+                0,
+                0
+            ]
+        },
+        {
+            "measurecode": "PTSV",
+            "tac": "",
+            "prd": "BOMProd2",
+            "from": "202510",
+            "value": [
+                0,
+                0
+            ]
+        },
+        {
+            "measurecode": "PTSV",
+            "tac": "",
+            "prd": "ProdPart1",
+            "from": "202510",
+            "value": [
+                0,
+                0
+            ]
+        },
+        {
+            "measurecode": "PTSV",
+            "tac": "",
+            "prd": "ProdPart2",
+            "from": "202510",
+            "value": [
+                0,
+                0
+            ]
+        },
+        {
+            "measurecode": "PTSV",
+            "tac": "",
+            "prd": "ProdPart3",
+            "from": "202510",
+            "value": [
+                0,
+                0
+            ]
+        },
+        {
+            "measurecode": "PDVL",
+            "tac": "",
+            "prd": "BomProd1",
+            "from": "202510",
+            "value": [
+                10,
+                20
+            ]
+        },
+        {
+            "measurecode": "PDVL",
+            "tac": "",
+            "prd": "BOMProd2",
+            "from": "202510",
+            "value": [
+                30,
+                50
+            ]
+        }
+    ]
+}

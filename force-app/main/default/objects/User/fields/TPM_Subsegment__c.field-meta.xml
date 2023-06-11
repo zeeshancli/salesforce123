@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Subsegment__c</fullName>
+    <description>SubSegment of the customer</description>
+    <externalId>false</externalId>
+    <label>Subsegment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>TPM_Subsegment</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

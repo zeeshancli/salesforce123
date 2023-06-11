@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>TPM_CustomerHierarchyBatch</label>
+    <protected>false</protected>
+    <values>
+        <field>TPM_BaseQuery__c</field>
+        <value xsi:type="xsd:string">SELECT Id, TPM_Parnt_Cust_HrLvl__c, TPM_Child_Cust_HrLvl__c, TPM_Parnt_Cust_ID__c, TPM_Child_Cust_ID__c, TPM_Cust_Hrchy_Strt_Dt__c, TPM_Cust_Hrchy_End_DT__c, TPM_Convert_Status__c FROM TPM_Customer_Hierarchy_Staging__c</value>
+    </values>
+    <values>
+        <field>TPM_BatchSize__c</field>
+        <value xsi:type="xsd:string">100</value>
+    </values>
+    <values>
+        <field>TPM_QueryCondition__c</field>
+        <value xsi:type="xsd:string">WHERE TPM_Parnt_Cust_ID__c &lt;&gt; null AND TPM_Child_Cust_ID__c &lt;&gt; NULL AND TPM_Convert_Status__c = &apos;New&apos;</value>
+    </values>
+</CustomMetadata>

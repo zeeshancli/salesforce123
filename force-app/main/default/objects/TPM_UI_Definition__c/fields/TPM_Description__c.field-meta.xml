@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Description__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE($User.cgcloud__Language_Postfix__c,
+&quot;Language1&quot;, TPM_Description_Language_1__c,
+&quot;Language2&quot;, BLANKVALUE(TPM_Description_Language_2__c,TPM_Description_Language_1__c),
+&quot;Language3&quot;, BLANKVALUE(TPM_Description_Language_3__c,TPM_Description_Language_1__c),
+&quot;Language4&quot;, BLANKVALUE(TPM_Description_Language_4__c,TPM_Description_Language_1__c),
+TPM_Description_Language_1__c)</formula>
+    <label>Description</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

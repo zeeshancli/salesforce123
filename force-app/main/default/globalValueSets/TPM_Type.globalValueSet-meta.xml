@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>LTA</fullName>
+        <default>false</default>
+        <label>LTA</label>
+    </customValue>
+    <customValue>
+        <fullName>EDLP</fullName>
+        <default>false</default>
+        <label>EDLP</label>
+    </customValue>
+    <customValue>
+        <fullName>Short Term Event</fullName>
+        <default>false</default>
+        <label>Short Term Event</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Programs</fullName>
+        <default>false</default>
+        <label>Other Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>Display Shipper</fullName>
+        <default>false</default>
+        <label>Display Shipper</label>
+    </customValue>
+    <customValue>
+        <fullName>Volume Push</fullName>
+        <default>false</default>
+        <label>Volume Push</label>
+    </customValue>
+    <customValue>
+        <fullName>Logistic Discount</fullName>
+        <default>false</default>
+        <label>Logistic Discount</label>
+    </customValue>
+    <customValue>
+        <fullName>Distributor Discounts</fullName>
+        <default>false</default>
+        <label>Distributor Discounts</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer Price Reduction</fullName>
+        <default>false</default>
+        <label>Consumer Price Reduction</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer Price Reduction - Extra OI</fullName>
+        <default>false</default>
+        <label>Consumer Price Reduction - Extra OI</label>
+    </customValue>
+    <customValue>
+        <fullName>LTA - OI Extra</fullName>
+        <default>false</default>
+        <label>LTA - OI Extra</label>
+    </customValue>
+    <customValue>
+        <fullName>Cash Discounts</fullName>
+        <default>false</default>
+        <label>Cash Discounts</label>
+    </customValue>
+    <customValue>
+        <fullName>Placement Fees</fullName>
+        <default>false</default>
+        <label>Placement Fees</label>
+    </customValue>
+    <customValue>
+        <fullName>Short Term Allowance</fullName>
+        <default>false</default>
+        <label>Short Term Allowance</label>
+    </customValue>
+    <customValue>
+        <fullName>Data / Market Research</fullName>
+        <default>false</default>
+        <label>Data / Market Research</label>
+    </customValue>
+    <customValue>
+        <fullName>Displays and Fixtures</fullName>
+        <default>false</default>
+        <label>Displays and Fixtures</label>
+    </customValue>
+    <customValue>
+        <fullName>In-Store Merchandising Labor</fullName>
+        <default>false</default>
+        <label>In-Store Merchandising Labor</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Sales Deductions</fullName>
+        <default>false</default>
+        <label>Other Sales Deductions</label>
+    </customValue>
+    <customValue>
+        <fullName>Shopper Marketing Agency</fullName>
+        <default>false</default>
+        <label>Shopper Marketing Agency</label>
+    </customValue>
+    <customValue>
+        <fullName>Shopper Marketing Execution</fullName>
+        <default>false</default>
+        <label>Shopper Marketing Execution</label>
+    </customValue>
+    <customValue>
+        <fullName>100% TPR</fullName>
+        <default>false</default>
+        <label>100% TPR</label>
+    </customValue>
+    <customValue>
+        <fullName>Digital Media</fullName>
+        <default>false</default>
+        <label>Digital Media</label>
+    </customValue>
+    <customValue>
+        <fullName>Influencer &amp; Professionals</fullName>
+        <default>false</default>
+        <label>Influencer &amp; Professionals</label>
+    </customValue>
+    <customValue>
+        <fullName>LTA Fixed</fullName>
+        <default>false</default>
+        <label>LTA Fixed</label>
+    </customValue>
+    <customValue>
+        <fullName>Stickering Fees</fullName>
+        <default>false</default>
+        <label>Stickering Fees</label>
+    </customValue>
+    <description>Type of Promotion and Tactics</description>
+    <masterLabel>Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

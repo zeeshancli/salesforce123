@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Query_Footer__c</fullName>
+    <description>Allows for statements AFTER the Where Clause. Example: GROUP BY field1, field2 SORT BY field1 ASC</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Example: GROUP BY field1, field2 SORT BY field1 ASC</inlineHelpText>
+    <label>Query Footer</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

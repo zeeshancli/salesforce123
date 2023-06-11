@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>TPM_Customer_Business_Plan_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>cgcloud__Account_Plan__c</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>TPM_Product_Assortment_Lightning_App_Specific</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Assortment</pageOrSobjectType>
+    </actionOverrides>
+    <description>Manage your trade planning process with trade calendar, accounts, promotions and more</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Trade Promotion Management</label>
+    <navType>Standard</navType>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Duracell_Promotion_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>cgcloud__Promotion__c</pageOrSobjectType>
+        <recordType>cgcloud__Promotion__c.cgcloud__Promotion</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Duracell_Promotion_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>cgcloud__Promotion__c</pageOrSobjectType>
+        <recordType>cgcloud__Promotion__c.cgcloud__Promotion</recordType>
+        <type>Flexipage</type>
+        <profile>Sales Profile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Duracell_Promotion_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>cgcloud__Promotion__c</pageOrSobjectType>
+        <recordType>cgcloud__Promotion__c.cgcloud__Promotion</recordType>
+        <type>Flexipage</type>
+        <profile>Business Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>TPM_Product_Assortment_Lightning_System_Admin</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Assortment</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <tabs>standard-home</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>cgcloud__Trade_Planning</tabs>
+    <tabs>cgcloud__Account_Plan__c</tabs>
+    <tabs>cgcloud__Promotion__c</tabs>
+    <tabs>standard-Product2</tabs>
+    <tabs>cgcloud__Fund__c</tabs>
+    <tabs>cgcloud__Fund_Transaction_Header__c</tabs>
+    <tabs>cgcloud__Rate_Based_Funding__c</tabs>
+    <tabs>cgcloud__Payment__c</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>

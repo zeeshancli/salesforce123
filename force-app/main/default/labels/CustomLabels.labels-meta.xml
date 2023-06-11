@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>TPM_Billback_Retrospective_Validation_Label</fullName>
+        <categories>Validations</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_Billback_Retrospective_Validation_Label</shortDescription>
+        <value>LTAOIExtra_Variable_IT01,CashDiscounts_Variable_IT01,LTALogisticDiscount_Variable_IT01,DistributorDiscounts_Variable_IT01,ConsumerPriceReductionExtraOI_Variable_IT01</value>
+    </labels>
+    <labels>
+        <fullName>TPM_CustomerTemplateAssignmentBatchSize</fullName>
+        <categories>TPM_CustomerTemplateAssignmentBatchSize</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_CustomerTemplateAssignmentBatchSize</shortDescription>
+        <value>200</value>
+    </labels>
+    <labels>
+        <fullName>TPM_CustomerExtentionBatchSize</fullName>
+        <categories>TPM_CustomerExtentionBatchSize</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_CustomerExtentionBatchSize</shortDescription>
+        <value>50</value>
+    </labels>
+    <labels>
+        <fullName>isTPMBatchSequenced</fullName>
+        <categories>Apex Batch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>isTPMBatchSequenced</shortDescription>
+        <value>True</value>
+    </labels>
+    <labels>
+        <fullName>TPM_CustHrBothCustNotFound</fullName>
+        <categories>CustomerHierarchyBatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_CustHrBothCustNotFound</shortDescription>
+        <value>Both Customers do not match Account records.</value>
+    </labels>
+    <labels>
+        <fullName>TPM_CustHrChildLvlMisMatch</fullName>
+        <categories>CustomerHierarchyBatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_CustHrChildLvlMisMatch</shortDescription>
+        <value>Child Customer does not match with CHS child Hierarchy Level.</value>
+    </labels>
+    <labels>
+        <fullName>TPM_CustHrChildNotFound</fullName>
+        <categories>CustomerHierarchyBatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_CustHrChildNotFound</shortDescription>
+        <value>Child Customer does not match an Account record.</value>
+    </labels>
+    <labels>
+        <fullName>TPM_CustHrParentLvlMisMatch</fullName>
+        <categories>CustomerHierarchyBatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_CustHrParentLvlMisMatch</shortDescription>
+        <value>Parent Customer does not match with CHS parent Hierarchy Level.</value>
+    </labels>
+    <labels>
+        <fullName>TPM_CustHrParentNotFound</fullName>
+        <categories>CustomerHierarchyBatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_CustHrParentNotFound</shortDescription>
+        <value>Parent Customer does not match an Account record.</value>
+    </labels>
+    <labels>
+        <fullName>TPM_CustomerHrRelationInvalid</fullName>
+        <categories>CustomerHierarchyBatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_CustomerHrRelationInvalid</shortDescription>
+        <value>Hierarchy relationship is invalid.</value>
+    </labels>
+    <labels>
+        <fullName>TPM_CustomerStagingHrLvlBlank</fullName>
+        <categories>CustomerHierarchyBatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_CustomerStagingHrLvlBlank</shortDescription>
+        <value>Either of parent or child staging hierarchy level are empty.</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Data_Load_File_Name_CustomPeriod</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM Data Load File Name CustomPeriod</shortDescription>
+        <value>TPM_CustomPeriod</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Data_Load_File_Name_KpiSet</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM Data Load File Name KpiSet</shortDescription>
+        <value>TPM_KPISet</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Data_Load_File_Name_SalesOrg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM Data Load File Name SalesOrg</shortDescription>
+        <value>TPM_SalesOrg</value>
+    </labels>
+    <labels>
+        <fullName>TPM_CustomerStagingPrntChldextIdsNull</fullName>
+        <categories>CustomerHierarchyBatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>If Customer Staging Parent Child EXT Ids Null</shortDescription>
+        <value>Either of Parent/Child Customer Id on Staging are empty.</value>
+    </labels>
+    <labels>
+        <fullName>TPM_IsProductFlatteningSequenced</fullName>
+        <categories>TPM_ProductFlatteningCategoryBatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_IsProductFlatteningSequenced</shortDescription>
+        <value>True</value>
+    </labels>
+    <labels>
+        <fullName>TPM_IsProductHierarchySequencedWithFlattening</fullName>
+        <categories>TPM_ProductHierarchyCreationBatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_IsProductHierarchySequencedWithFlattening</shortDescription>
+        <value>True</value>
+    </labels>
+    <labels>
+        <fullName>TPM_IsProductTemplateSequencedWithHierarchy</fullName>
+        <categories>TPM_ProductTemplateAssignmentBatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_IsProductTemplateSequencedWithHierarchy</shortDescription>
+        <value>True</value>
+    </labels>
+    <labels>
+        <fullName>TPM_OI_Validation_Label</fullName>
+        <categories>Validations</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_OI_Validation_Label</shortDescription>
+        <value>ShortTermAllowance_Variable_IT01,InfluencerProfessionals_Variable_IT01,InStoreMerchandisingLabor_Variable_IT01,DigitalMedia_Variable_IT01,PlacementFees_Variable_IT01,OtherSalesDeductions_Variable_IT01,ShopperMarketingAgency_Variable_IT01,DataMarketResearch_Fixed_IT01,DataMarketResearch_Variable_IT01,StickeringFees_Fixed_IT01,StickeringFees_Variable_IT01,ConsumerPriceReduction_Variable_US01,InStoreMerchandisingLabor_Variable_US01,ShopperMarketingExecution_Variable_US01,DataMarketResearch_Variable_US01</value>
+    </labels>
+	<labels>
+        <fullName>TPM_PHS_DuplicateTimeFrameMsg</fullName>
+        <categories>TPM_ProductHierarchyCreationBatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_PHS_DuplicateTimeFrameMsg</shortDescription>
+        <value>Product Hierarchy in the same time frame already exists.</value>
+    </labels>
+	<labels>
+        <fullName>TPM_PHS_InvalidHierarchy</fullName>
+        <categories>TPM_ProductHierarchyCreationBatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_PHS_InvalidHierarchy</shortDescription>
+        <value>Hierarchy relationship is invalid</value>
+    </labels>
+	<labels>
+        <fullName>TPM_PHS_NoChildProductFound</fullName>
+        <categories>TPM_ProductHierarchyCreationBatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_PHS_NoChildProductFound</shortDescription>
+        <value>Child Product does not match a Product2 record</value>
+    </labels>
+    <labels>
+        <fullName>TPM_PHS_NoParentProductFound</fullName>
+        <categories>TPM_ProductHierarchyCreationBatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_PHS_NoParentProductFound</shortDescription>
+        <value>Parent Product does not match a Product2 record</value>
+    </labels>
+    <labels>
+        <fullName>TPM_PHS_NoProductFound</fullName>
+        <categories>TPM_ProductHierarchyCreationBatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_PHS_NoProductFound</shortDescription>
+        <value>Both Products do not match a Product2 record</value>
+    </labels>
+    <labels>
+        <fullName>TPM_PHS_PHSDuplicateTimeFrame</fullName>
+        <categories>TPM_ProductHierarchyCreationBatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_PHS_PHSDuplicateTimeFrame</shortDescription>
+        <value>Product Hierarchy in the same time frame already exists at staging.</value>
+    </labels>
+    <labels>
+        <fullName>TPM_ProductFlatteningNoEditOnProduct</fullName>
+        <categories>TPM_ProductFlatteningCategoryBatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_ProductFlatteningNoEditOnProduct</shortDescription>
+        <value>Current user does not have create access on Product2 object.</value>
+    </labels>
+    <labels>
+        <fullName>TPM_CHS_CHSDuplicateTimeFrame</fullName>
+        <categories>TPM_CustomerHierarchyBatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_CHS_CHSDuplicateTimeFrame</shortDescription>
+        <value>Trade Org Hierarchy in the same time frame already exists at staging.</value>
+    </labels>
+    <labels>
+        <fullName>TPM_CHS_DuplicateTimeFrameMsg</fullName>
+        <categories>TPM_CustomerHierarchyBatch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_CHS_DuplicateTimeFrameMsg</shortDescription>
+        <value>Trade Org Hierarchy in the same time frame already exists.</value>
+    </labels>
+     <labels>
+        <fullName>TPM_AssortmentCreationBatchSize</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_AssortmentCreationBatchSize</shortDescription>
+         <value>100</value>
+     </labels>
+     <labels>
+         <fullName>isAssortmentBatchSequenced</fullName>
+         <language>en_US</language>
+         <protected>false</protected>
+         <shortDescription>isAssortmentBatchSequenced</shortDescription>
+         <value>True</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Account_Error_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM Account Error Message</shortDescription>
+        <value>You do not have permission to edit this Account. Please contact your system administrator.</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Account_Error_Message_Delete</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM Account Error Message Delete</shortDescription>
+        <value>You do not have permission to delete this Account. Please contact your system administrator.</value>
+    </labels>
+     <labels>
+        <fullName>TPM_Assortment_Error_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM Assortment Error Message</shortDescription>
+        <value>You do not have permission to edit this assortment. Please contact your system administrator.</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Assortment_Error_Message_Delete</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM Assortment Error Message Delete</shortDescription>
+        <value>You do not have permission to delete this assortment. Please contact your system administrator.</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Promotion_Custom_Error_Message</fullName>
+        <categories>TPM_Custom_Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Promotion Custom Error Message</shortDescription>
+        <value>Required fields are missing. Promotion cannot be Saved.</value>
+    </labels>
+    <labels>
+        <fullName>TPM_RequiredFieldMissingMsg</fullName>
+        <categories>tpmTacticInfoCardContainer</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_RequiredFieldMissingMsg</shortDescription>
+        <value>Required fields are missing. Tactic cannot be saved.</value>
+    </labels>
+     <labels>
+        <fullName>TPM_Overlap_Check_Failure</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Overlap Check Failure</shortDescription>
+        <value>There are promotions overlapping with this promotion</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Overlap_Check_Products</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Overlap Check Products</shortDescription>
+        <value>Please add at least one product to the promotion and enter values in the planning metrics before updating the promotion phase.</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Overlap_Check_Success</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Overlap Check Success</shortDescription>
+        <value>This promotion has successfully passed overlap checks and moved to Planning status</value>
+    </labels>
+     <labels>
+        <fullName>TPM_CLIENT_ID</fullName>
+        <categories>TPM_Hyperforce_API</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_CLIENT_ID</shortDescription>
+        <value>3MVG91Cqi3bGIrUNzJFeloRAU5G95uxR5iEY96wIewl9fwNUqUJUNBQCHphvxKod0laiHGss1WIaTVIadL3Qc</value>
+    </labels>
+    <labels>
+        <fullName>TPM_CLIENT_SECRET</fullName>
+        <categories>TPM_Hyperforce_API</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_CLIENT_SECRET</shortDescription>
+        <value>E2F61FB3614172FA875D6C2CEDE28394BD82049D6C2771E9C7AF7FB515CB67A2</value>
+    </labels>
+    <labels>
+        <fullName>TPM_PASSWORD</fullName>
+        <categories>TPM_Hyperforce_API</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_PASSWORD</shortDescription>
+        <value>Dev@2023H1gC12CQs9wbj4mhF7aXdwel</value>
+    </labels>
+    <labels>
+        <fullName>TPM_USER_NAME</fullName>
+        <categories>TPM_Hyperforce_API</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_USER_NAME</shortDescription>
+        <value>harishvikkram.raghu@duracell.com.devsbudys</value>
+    </labels>
+      <labels>
+        <fullName>TPM_Base_URL</fullName>
+        <categories>TPM_Hyperforce_API</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_Base_URL</shortDescription>
+        <value>https://duracell-sales--devsbvids.sandbox.my.salesforce.com/services/oauth2/token</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Hyperforce_Base_URL</fullName>
+        <categories>TPM_Hyperforce_API</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_Hyperforce_Base_URL</shortDescription>
+        <value>https://rcg-integration.industries.sfdc-yfeipo.svc.sfdcfc.net/api/v1/</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Overlapping_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_Overlapping_Message</shortDescription>
+        <value>An overlapping promotion of the same type was found, so this promotion will remain in the Draft status until overlaps are resolved. See overlap section below for more details.</value>
+    </labels>
+    <labels>
+        <fullName>TPM_PromotionApproval_RecordLink</fullName>
+        <categories>TPM_PromotionApprovalProcess</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_PromotionApproval_RecordLink</shortDescription>
+        <value>https://duracell-sales--qa.sandbox.lightning.force.com</value>
+    </labels>
+    <labels>
+        <fullName>TPM_PromotionApproval_EmailSubject</fullName>
+        <categories>TPM_PromotionApprovalProcess</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_PromotionApproval_EmailSubject</shortDescription>
+        <value>Promotion Approval Request</value>
+    </labels>
+       <labels>
+        <fullName>TPM_Missing_Products</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Missing Products</shortDescription>
+        <value>Missing Products</value>
+    </labels>
+    <labels>
+        <fullName>TPM_No_Overlap_Found</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Overlap Found</shortDescription>
+        <value>No Overlap Found</value>
+    </labels>
+    <labels>
+        <fullName>TPM_PromotionApproval_TopApproverName</fullName>
+        <categories>TPM_PromotionApprovalProcess</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_PromotionApproval_TopApproverName</shortDescription>
+        <value>Hilding Branzell</value>
+    </labels>
+    <labels>
+        <fullName>TPM_PromotionApproval_TopApprovalAmount</fullName>
+        <categories>TPM_PromotionApprovalProcess</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_PromotionApproval_TopApprovalAmount</shortDescription>
+        <value>20000000</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Promotion_PreventSubmissionForApproval</fullName>
+        <categories>TPM_Custom_Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Promotion prevent submission for approval.</shortDescription>
+        <value>Promotions cannot be submitted for approval at this time. Please contact your admin if you have further questions.</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Promotion_IsActivePreventForApproval</fullName>
+        <categories>TPM_Custom_Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Flag for promotion's prevent submission for approval validation to run.</shortDescription>
+        <value>True</value>
+    </labels>
+    <labels>
+        <fullName>TPM_PromotionApproval_ApproverNotFoundError</fullName>
+        <categories>TPM_PromotionApprovalProcess</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_PromotionApproval_ApproverNotFoundError</shortDescription>
+        <value>No approver assigned for promotion approval. Please check active manager for submitter in hierarchy for record :</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Rate_Basis_Validation_Label</fullName>
+        <categories>Validations</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_Rate_Basis_Validation_Label</shortDescription>
+        <value>CashDiscounts_Variable_IT01,DistributorDiscounts_Variable_IT01,LTALogisticDiscount_Variable_IT01,LTAOIExtra_Variable_IT01,ConsumerPriceReductionExtraOI_Variable_IT01,LTA_Variable_IT01,ConsumerPriceReduction_Variable_IT01,DisplayShipper_Variable_IT01</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Approval</fullName>
+        <categories>TPM_Custom_Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_Approval</shortDescription>
+        <value>Approval</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Approval_Created_Date</fullName>
+        <categories>TPM_Custom_Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_Approval_Created_Date</shortDescription>
+        <value>Approval Created Date</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Approval_Status</fullName>
+        <categories>TPM_Custom_Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_Approval_Status</shortDescription>
+        <value>Approval Status</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Approver</fullName>
+        <categories>TPM_Custom_Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_Approver</shortDescription>
+        <value>Approver</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Promotion_Submitter</fullName>
+        <categories>TPM_Custom_Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_Promotion_Submitter</shortDescription>
+        <value>Promotion Submitter</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Phase_Change</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_Phase_Change</shortDescription>
+        <value>You cannot move this promotion into the selected status. Please try again.</value>
+    </labels>
+     <labels>
+        <fullName>TPM_OverLap_Push_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM OverLap Push Message</shortDescription>
+        <value>An Overlapping promotion of the same type was found in a child promotion, so this promotion entirety will remain in the draft status until overlaps are revised. See Overlap Section below for more details</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Overlap_Check_Failure</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Overlap Check Failure</shortDescription>
+        <value>There are promotions overlapping with this promotion</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Overlap_Check_Success</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Overlap Check Success</shortDescription>
+        <value>This promotion has successfully passed overlap checks and moved to Planning status</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Overlap_In_Progress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM Overlap In Progress</shortDescription>
+        <value>OverLap Check in Progress</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Overlapping_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_Overlapping_Message</shortDescription>
+        <value>An overlapping promotion of the same type was found, so this promotion will remain in the Draft status until overlaps are resolved. See overlap section below for more details.</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Push_Fail</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM Push Fail</shortDescription>
+        <value>The push of this promotion has failed, so this promotion has been moved back to draft. Please press the &apos;Push&apos; button again or contact your admin if this issue continues to occur</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Push_Promotion_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM Push Promotion Message</shortDescription>
+        <value>Please press &apos;Push&apos; button in order to see promotion updates and overlap checks.</value>
+    </labels>
+    <labels>
+        <fullName>TPM_Child_Promotion_Templates</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Child Promotion Templates</shortDescription>
+        <value>Child_LTA_IT01,Child_OtherPrograms_IT01,Child_ShortTermEvent_IT01,Child_VolumePush_IT01</value>
+    </labels>
+    <labels>
+        <fullName>TPM_IsActiveCustomerValidationMessage</fullName>
+        <categories>TPM_Custom_Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPM_IsActiveCustomerValidationMessage</shortDescription>
+        <value>The selected customer record has been inactivated due to a setup issue. Please contact your Salesforce Business Administrator and try again.</value>
+    </labels>
+</CustomLabels>

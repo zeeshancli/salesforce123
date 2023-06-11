@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OverLapCheckPush</label>
+    <protected>false</protected>
+    <values>
+        <field>TPM_Child_Promotion__c</field>
+        <value xsi:type="xsd:string">Child_ShortTermEvent_IT01;ShortTermEvent_Basic_IT01;ShortTermEvent_Intermediate_IT01</value>
+    </values>
+    <values>
+        <field>TPM_Parent_Promotion__c</field>
+        <value xsi:type="xsd:string">Parent_ShortTermEvent_IT01</value>
+    </values>
+    <values>
+        <field>TPM_Promotion_Template_For_OverLap_Check__c</field>
+        <value xsi:type="xsd:string">Parent_ShortTermEvent_IT01;Parent_OtherPrograms_IT01;Parent_LTA_IT01</value>
+    </values>
+</CustomMetadata>

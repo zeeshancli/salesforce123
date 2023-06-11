@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Parnt_Prod_HrLvl__c</fullName>
+    <description>Hierarchy Level of the Parent Product</description>
+    <externalId>false</externalId>
+    <label>Parent Product Hierarchy Level Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Top Node</fullName>
+                <default>false</default>
+                <label>Top Node</label>
+            </value>
+            <value>
+                <fullName>Category</fullName>
+                <default>false</default>
+                <label>Category</label>
+            </value>
+            <value>
+                <fullName>Report Group</fullName>
+                <default>false</default>
+                <label>Report Group</label>
+            </value>
+            <value>
+                <fullName>Battery Device Type</fullName>
+                <default>false</default>
+                <label>Battery Device Type</label>
+            </value>
+            <value>
+                <fullName>Pack Size</fullName>
+                <default>false</default>
+                <label>Pack Size</label>
+            </value>
+            <value>
+                <fullName>UPC/EAN</fullName>
+                <default>false</default>
+                <label>UPC/EAN</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

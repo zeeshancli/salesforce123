@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Persona__c</fullName>
+    <defaultValue>(&apos;Account Executive&apos;)</defaultValue>
+    <description>Persona of the User to derive users accessibility</description>
+    <externalId>false</externalId>
+    <label>Persona</label>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>System Administrator</fullName>
+                <default>false</default>
+                <label>System Administrator</label>
+            </value>
+            <value>
+                <fullName>Business Administrator</fullName>
+                <default>false</default>
+                <label>Business Administrator</label>
+            </value>
+            <value>
+                <fullName>Data and Analytics</fullName>
+                <default>false</default>
+                <label>Data and Analytics</label>
+            </value>
+            <value>
+                <fullName>Trade Payments</fullName>
+                <default>false</default>
+                <label>Trade Payments</label>
+            </value>
+            <value>
+                <fullName>Sales Director</fullName>
+                <default>false</default>
+                <label>Sales Director</label>
+            </value>
+            <value>
+                <fullName>Sales Finance</fullName>
+                <default>false</default>
+                <label>Sales Finance</label>
+            </value>
+            <value>
+                <fullName>Sales Managers</fullName>
+                <default>false</default>
+                <label>Sales Managers</label>
+            </value>
+            <value>
+                <fullName>Account Executive</fullName>
+                <default>true</default>
+                <label>Account Executive</label>
+            </value>
+            <value>
+                <fullName>Product Supply Chain</fullName>
+                <default>false</default>
+                <label>Product Supply Chain</label>
+            </value>
+            <value>
+                <fullName>External Account Executive</fullName>
+                <default>false</default>
+                <label>External Account Executive</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

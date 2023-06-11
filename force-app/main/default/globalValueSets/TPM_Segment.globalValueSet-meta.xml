@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>FOOD_DRUG</fullName>
+        <default>false</default>
+        <label>FOOD_DRUG</label>
+    </customValue>
+    <customValue>
+        <fullName>TI</fullName>
+        <default>false</default>
+        <label>TI</label>
+    </customValue>
+    <customValue>
+        <fullName>DOA</fullName>
+        <default>false</default>
+        <label>DOA</label>
+    </customValue>
+    <customValue>
+        <fullName>Russia</fullName>
+        <default>false</default>
+        <label>Russia</label>
+    </customValue>
+    <customValue>
+        <fullName>NCE</fullName>
+        <default>false</default>
+        <label>NCE</label>
+    </customValue>
+    <customValue>
+        <fullName>BNL</fullName>
+        <default>false</default>
+        <label>BNL</label>
+    </customValue>
+    <customValue>
+        <fullName>SE</fullName>
+        <default>false</default>
+        <label>SE</label>
+    </customValue>
+    <customValue>
+        <fullName>CLUB</fullName>
+        <default>false</default>
+        <label>CLUB</label>
+    </customValue>
+    <customValue>
+        <fullName>MEXICO</fullName>
+        <default>false</default>
+        <label>MEXICO</label>
+    </customValue>
+    <customValue>
+        <fullName>BRAZIL</fullName>
+        <default>false</default>
+        <label>BRAZIL</label>
+    </customValue>
+    <customValue>
+        <fullName>LADEX</fullName>
+        <default>false</default>
+        <label>LADEX</label>
+    </customValue>
+    <customValue>
+        <fullName>CHINA</fullName>
+        <default>false</default>
+        <label>CHINA</label>
+    </customValue>
+    <customValue>
+        <fullName>AADO</fullName>
+        <default>false</default>
+        <label>AADO</label>
+    </customValue>
+    <customValue>
+        <fullName>South Korea</fullName>
+        <default>false</default>
+        <label>South Korea</label>
+    </customValue>
+    <customValue>
+        <fullName>WALM_MASS</fullName>
+        <default>false</default>
+        <label>WALM_MASS</label>
+    </customValue>
+    <customValue>
+        <fullName>France</fullName>
+        <default>false</default>
+        <label>France</label>
+    </customValue>
+    <customValue>
+        <fullName>Amazon</fullName>
+        <default>false</default>
+        <label>Amazon</label>
+    </customValue>
+    <customValue>
+        <fullName>Portable power</fullName>
+        <default>false</default>
+        <label>Portable power</label>
+    </customValue>
+    <customValue>
+        <fullName>HOME_HW</fullName>
+        <default>false</default>
+        <label>HOME_HW</label>
+    </customValue>
+    <customValue>
+        <fullName>ALT</fullName>
+        <default>false</default>
+        <label>ALT</label>
+    </customValue>
+    <customValue>
+        <fullName>Argentina</fullName>
+        <default>false</default>
+        <label>Argentina</label>
+    </customValue>
+    <customValue>
+        <fullName>B2B America</fullName>
+        <default>false</default>
+        <label>B2B America</label>
+    </customValue>
+    <customValue>
+        <fullName>B2B International</fullName>
+        <default>false</default>
+        <label>B2B International</label>
+    </customValue>
+    <customValue>
+        <fullName>CHILE</fullName>
+        <default>false</default>
+        <label>CHILE</label>
+    </customValue>
+    <customValue>
+        <fullName>India</fullName>
+        <default>false</default>
+        <label>India</label>
+    </customValue>
+    <customValue>
+        <fullName>Middle East</fullName>
+        <default>false</default>
+        <label>Middle East</label>
+    </customValue>
+    <customValue>
+        <fullName>UK&amp;I</fullName>
+        <default>false</default>
+        <label>UK&amp;I</label>
+    </customValue>
+    <description>Segment of the customer</description>
+    <masterLabel>Segment</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

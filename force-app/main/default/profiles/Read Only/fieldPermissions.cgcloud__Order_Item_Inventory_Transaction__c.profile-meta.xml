@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Order_Item_Inventory_Transaction__c.cgcloud__Active__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Order_Item_Inventory_Transaction__c.cgcloud__Inventory_Control_Template__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Order_Item_Inventory_Transaction__c.cgcloud__Inventory_Transaction_Template__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Order_Item_Inventory_Transaction__c.cgcloud__Unique_Field_Display__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Order_Item_Inventory_Transaction__c.cgcloud__Unique_Inventory_Templates__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Order_Item_Inventory_Transaction__c.cgcloud__Used_For_Display__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+</Profile>

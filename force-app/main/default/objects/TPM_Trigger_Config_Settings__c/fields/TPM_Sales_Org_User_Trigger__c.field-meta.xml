@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Sales_Org_User_Trigger__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>To Activate or Deactivate Sales Org User Record Trigger</description>
+    <externalId>false</externalId>
+    <label>TPM Sales Org User Trigger</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

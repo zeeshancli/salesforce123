@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_BrandNM__c</fullName>
+    <description>Indicates the name of the Duracell Brand</description>
+    <externalId>false</externalId>
+    <label>Brand Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Duracell</fullName>
+                <default>false</default>
+                <label>Duracell</label>
+            </value>
+            <value>
+                <fullName>Industrial</fullName>
+                <default>false</default>
+                <label>Industrial</label>
+            </value>
+            <value>
+                <fullName>Procell</fullName>
+                <default>false</default>
+                <label>Procell</label>
+            </value>
+            <value>
+                <fullName>Private Label</fullName>
+                <default>false</default>
+                <label>Private Label</label>
+            </value>
+            <value>
+                <fullName>Rocket</fullName>
+                <default>false</default>
+                <label>Rocket</label>
+            </value>
+            <value>
+                <fullName>Sunpower</fullName>
+                <default>false</default>
+                <label>Sunpower</label>
+            </value>
+            <value>
+                <fullName>Mallory</fullName>
+                <default>false</default>
+                <label>Mallory</label>
+            </value>
+            <value>
+                <fullName>Unallocated</fullName>
+                <default>false</default>
+                <label>Unallocated</label>
+            </value>
+            <value>
+                <fullName>Intermediates</fullName>
+                <default>false</default>
+                <label>Intermediates</label>
+            </value>
+            <value>
+                <fullName>Finacial</fullName>
+                <default>false</default>
+                <label>Finacial</label>
+            </value>
+            <value>
+                <fullName>Historical</fullName>
+                <default>false</default>
+                <label>Historical</label>
+            </value>
+            <value>
+                <fullName>Not Duracell Product</fullName>
+                <default>false</default>
+                <label>Not Duracell Product</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

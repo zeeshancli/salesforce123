@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Register orgs with processing services</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>TPM CGC Processing Services Register</label>
+    <license>CGCProcessingServicesRegisterPsl</license>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>RunRegisterProcessingServices</name>
+    </userPermissions>
+</PermissionSet>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Workflow_State_Transition__c.cgcloud__Event__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Workflow_State_Transition__c.cgcloud__From_Initial_Stage__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Workflow_State_Transition__c.cgcloud__From_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Workflow_State_Transition__c.cgcloud__To_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+</Profile>

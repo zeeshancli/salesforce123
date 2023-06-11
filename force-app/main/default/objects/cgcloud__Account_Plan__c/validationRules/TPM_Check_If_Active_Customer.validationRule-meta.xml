@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Check_If_Active_Customer</fullName>
+    <active>true</active>
+    <description>To Check Whether the Account for the selected SVF is Active or Not.
+    i.e TPM_Is_Active = TRUE</description>
+    <errorConditionFormula>IF( ISNEW() , NOT( cgcloud__Account__r.TPM_IsActive__c ), False)</errorConditionFormula>
+    <errorMessage>The selected customer record has been inactivated due to a setup issue. Please contact your Salesforce Business Administrator and try again.</errorMessage>
+</ValidationRule>

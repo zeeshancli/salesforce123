@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPMTacticShipmentInstoreEndValidation</fullName>
+    <active>true</active>
+    <description>Shipment End date must be less than or equal to In-store end date</description>
+    <errorConditionFormula>ISPICKVAL( cgcloud__Promotion__r.TPM_Phase__c ,&apos;Planning&apos;) &amp;&amp; ( cgcloud__Shipment_Date_Thru__c &gt;  cgcloud__Instore_Date_Thru__c )</errorConditionFormula>
+    <errorMessage>Shipment End date must be less than or equal to In-store end date</errorMessage>
+</ValidationRule>

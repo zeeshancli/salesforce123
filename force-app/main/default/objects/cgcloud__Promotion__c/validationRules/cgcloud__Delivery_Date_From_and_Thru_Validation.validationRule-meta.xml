@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cgcloud__Delivery_Date_From_and_Thru_Validation</fullName>
+    <active>false</active>
+    <description>Delivery Date From can&apos;t be later than Delivery Date Thru.</description>
+    <errorConditionFormula>cgcloud__Delivery_Date_From__c  &gt;  cgcloud__Delivery_Date_Thru__c</errorConditionFormula>
+    <errorMessage>Delivery Date From can&apos;t be later than Delivery Date Thru.</errorMessage>
+</ValidationRule>

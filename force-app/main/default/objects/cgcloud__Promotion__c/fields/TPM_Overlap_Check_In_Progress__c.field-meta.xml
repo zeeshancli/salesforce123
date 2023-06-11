@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Overlap_Check_In_Progress__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used for Overlap Check in Progress</description>
+    <externalId>false</externalId>
+    <label>Overlap Check In Progress</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

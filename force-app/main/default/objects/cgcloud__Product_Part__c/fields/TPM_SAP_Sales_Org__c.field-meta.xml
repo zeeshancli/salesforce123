@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_SAP_Sales_Org__c</fullName>
+    <description>Sales Org ID of the Display Component populated from SAP</description>
+    <externalId>false</externalId>
+    <label>SAP Sales Org</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>cgcloud__Sales_Org</valueSetName>
+    </valueSet>
+</CustomField>

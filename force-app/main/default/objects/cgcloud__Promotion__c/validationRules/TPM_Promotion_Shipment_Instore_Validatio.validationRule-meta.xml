@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Promotion_Shipment_Instore_Validatio</fullName>
+    <active>true</active>
+    <description>Shipment start date must be less than or equal to In-store start date</description>
+    <errorConditionFormula>ISPICKVAL(TPM_Phase__c  , &apos;Planning&apos;)&amp;&amp; (cgcloud__Delivery_Date_From__c  &gt; cgcloud__Placement_Date_From__c)</errorConditionFormula>
+    <errorMessage>Shipment start date must be less than or equal to In-store start date</errorMessage>
+</ValidationRule>

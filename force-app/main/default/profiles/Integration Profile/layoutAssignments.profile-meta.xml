@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layoutAssignments>
+        <layout>Account-Full Account Layout Admin</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account-Full Account Layout Admin</layout>
+        <recordType>Account.TPM_Vendor</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account-Full Account Layout Admin</layout>
+        <recordType>Account.cgcloud__Customer</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Product2-Full Product Layout</layout>
+        <recordType>Product2.cgcloud__Product</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Product2-Full Product Layout</layout>
+        <recordType>Product2.cgcloud__Product_Group</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>TPM_Customer_Hierarchy_Staging__c-Customer Hierarchy Staging Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>TPM_Product_Hierarchy_Staging__c-Product Hierarchy Staging Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>User-cgcloud__User Custom Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Assortment-cgcloud__Assortment Layout 2</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>TPM_Approval__c-TPM_Claim_Layout</layout>
+        <recordType>TPM_Approval__c.TPM_Claim</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>TPM_Approval__c-TPM_Promotion_Layout</layout>
+        <recordType>TPM_Approval__c.TPM_Promotion</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>cgcloud__Account_Plan__c-cgcloud__Customer Business Plan Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>TPM_UI_Definition__c-UI Definition Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>TPM_Approval_Tactics__c-Approval Tactics Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>TPM_Approval_Tactics__c-Approval Tactics Layout</layout>
+        <recordType>TPM_Approval_Tactics__c.TPM_Claim_Tactics</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>TPM_Approval_Tactics__c-Approval Tactics Layout</layout>
+        <recordType>TPM_Approval_Tactics__c.TPM_Promotion_Tactics</recordType>
+    </layoutAssignments>
+</Profile>

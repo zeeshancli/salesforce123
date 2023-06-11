@@ -1,0 +1,219 @@
+<template>
+
+    <!-- To display new tactic UI -->
+    <template lwc:if={isAddTactic}>
+        <lightning-record-edit-form object-api-name={objApiName} record-type-id={objRecordTypeId} density="comfy">
+            <lightning-layout multiple-rows="true">
+                <lightning-layout-item size="12" class="slds-grid slds-wrap">
+
+                    <!-- Iteration of sections from UI Definition JSON--> 
+                    <template for:each={objectDataList} for:item="column">
+                        <lightning-layout-item key={column} size="12" 
+                                               small-device-size="12" 
+                                               medium-device-size="12" 
+                                               large-device-size="4">
+                            <template lwc:if={column.Title}>
+                                <div class="tpm-custom-title slds-form-element__label slds-truncate slds-var-p-left_x-small">
+                                    {column.Title}
+                                </div>
+                            </template>
+                            <template lwc:else>
+                                <div class="tpm-custom-empty-title slds-form-element__label slds-truncate slds-var-p-left_x-small">
+                                    Empty
+                                </div>
+                            </template>
+
+                            <!-- Iteration of each section rows-->
+                            <template for:each={column.CRows} for:item="cRow">
+                                <lightning-layout key={cRow} multiple-rows="true">
+
+                                    <!-- Iteration of each row columns-->
+                                    <template for:each={cRow.RColumns} for:item="rColumn">
+
+                                        <!-- To display field with full width -->
+                                        <template lwc:if={rColumn.FullWidth}>
+                                            <lightning-layout-item key={rColumn.Name} size="12">
+                                                <div class="slds-var-p-horizontal_xx-small">
+                                                    <span>
+                                                        <template lwc:if={isEditable}>
+                                                            <template lwc:if={rColumn.ReadOnly}>
+                                                                <lightning-output-field field-name={rColumn.Name} 
+                                                                                        value={rColumn.Value} 
+                                                                                        required={rColumn.Mandatory}>
+                                                                </lightning-output-field>
+                                                            </template>
+                                                            <template lwc:else>
+                                                                <lightning-input-field field-name={rColumn.Name} 
+                                                                                       value={rColumn.Value} 
+                                                                                       required={rColumn.Mandatory} 
+                                                                                       class={rColumn.Mandatory} 
+                                                                                       onfocusout={handleOnFocusOut}
+                                                                                       onchange={handleOnChangeField}>
+                                                                </lightning-input-field>
+                                                            </template>
+                                                        </template>
+                                                        <template lwc:else>
+                                                            <lightning-output-field field-class="slds-col-rule--bottom" 
+                                                                                    field-name={rColumn.Name} 
+                                                                                    value={rColumn.Value} 
+                                                                                    required={rColumn.Mandatory}>
+                                                            </lightning-output-field>
+                                                        </template>
+                                                    </span>
+                                                </div>
+                                            </lightning-layout-item>
+                                        </template>
+                                        <template lwc:else>
+                                            <lightning-layout-item key={rColumn.Name} size="12" 
+                                                                   small-device-size="12" 
+                                                                   medium-device-size="12" 
+                                                                   large-device-size="6">
+                                                <div class="slds-var-p-horizontal_xx-small">
+                                                    <span>
+                                                        <template lwc:if={isEditable}>
+                                                            <template lwc:if={rColumn.ReadOnly}>
+                                                                <lightning-output-field field-name={rColumn.Name} 
+                                                                                        value={rColumn.Value} 
+                                                                                        required={rColumn.Mandatory}>
+                                                                </lightning-output-field>
+                                                            </template>
+                                                            <template lwc:else>
+                                                                <lightning-input-field field-name={rColumn.Name} 
+                                                                                       value={rColumn.Value} 
+                                                                                       required={rColumn.Mandatory} 
+                                                                                       class={rColumn.Mandatory} 
+                                                                                       onfocusout={handleOnFocusOut}
+                                                                                       onchange={handleOnChangeField}>
+                                                                </lightning-input-field>
+                                                            </template>
+                                                        </template>
+                                                        <template lwc:else>
+                                                            <lightning-output-field field-class="slds-col-rule--bottom" 
+                                                                                    field-name={rColumn.Name} 
+                                                                                    value={rColumn.Value} 
+                                                                                    required={rColumn.Mandatory}>
+                                                            </lightning-output-field>
+                                                        </template>
+                                                    </span>
+                                                </div>
+                                            </lightning-layout-item>
+                                        </template>
+                                    </template>
+                                </lightning-layout>
+                            </template>
+                        </lightning-layout-item>
+                    </template>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-record-edit-form>
+    </template>
+
+    <!-- To display existing tactic UI -->
+    <template lwc:else>
+        <lightning-record-edit-form record-id={objectRecordId} object-api-name={objApiName} 
+                                    record-type-id={objRecordTypeId} density="comfy">
+            <lightning-layout multiple-rows="true">
+                <lightning-layout-item size="12" class="slds-grid slds-wrap">
+
+                    <!-- Iteration of sections from UI Definition JSON-->
+                    <template for:each={objectDataList} for:item="column">
+                        <lightning-layout-item key={column} size="12" 
+                                               small-device-size="12" 
+                                               medium-device-size="12" 
+                                               large-device-size="4">
+                            <template lwc:if={column.Title}>
+                                <div class="tpm-custom-title slds-form-element__label slds-truncate slds-var-p-left_x-small">
+                                    {column.Title}
+                                </div>
+                            </template>
+                            <template lwc:else>
+                                <div class="tpm-custom-empty-title slds-form-element__label slds-truncate slds-var-p-left_x-small">
+                                    Empty
+                                </div>
+                            </template>
+
+                            <!-- Iteration of each section rows-->
+                            <template for:each={column.CRows} for:item="cRow">
+                                <lightning-layout key={cRow} multiple-rows="true">
+
+                                    <!-- Iteration of each row columns-->
+                                    <template for:each={cRow.RColumns} for:item="rColumn">
+
+                                        <!-- To display field with full width -->
+                                        <template lwc:if={rColumn.FullWidth}>
+                                            <lightning-layout-item key={rColumn.Name} size="12">
+                                                <div class="slds-var-p-horizontal_xx-small">
+                                                    <span>
+                                                        <template lwc:if={isEditable}>
+                                                            <template lwc:if={rColumn.ReadOnly}>
+                                                                <lightning-output-field field-name={rColumn.Name} 
+                                                                                        value={rColumn.Value} 
+                                                                                        required={rColumn.Mandatory}>
+                                                                </lightning-output-field>
+                                                            </template>
+                                                            <template lwc:else>
+                                                                <lightning-input-field field-name={rColumn.Name} 
+                                                                                       value={rColumn.Value} 
+                                                                                       required={rColumn.Mandatory} 
+                                                                                       class={rColumn.Mandatory} 
+                                                                                       onfocusout={handleOnFocusOut}
+                                                                                       onchange={handleOnChangeField}>
+                                                                </lightning-input-field>
+                                                            </template>
+                                                        </template>
+                                                        <template lwc:else>
+                                                            <lightning-output-field field-class="slds-col-rule--bottom" 
+                                                                                    field-name={rColumn.Name} 
+                                                                                    value={rColumn.Value} 
+                                                                                    required={rColumn.Mandatory}>
+                                                            </lightning-output-field>
+                                                        </template>
+                                                    </span>
+                                                </div>
+                                            </lightning-layout-item>
+                                        </template>
+                                        <template lwc:else>
+                                            <lightning-layout-item key={rColumn.Name} size="12" 
+                                                                   small-device-size="12" 
+                                                                   medium-device-size="12" 
+                                                                   large-device-size="6">
+                                                <div class="slds-var-p-horizontal_xx-small">
+                                                    <span>
+                                                        <template lwc:if={isEditable}>
+                                                            <template lwc:if={rColumn.ReadOnly}>
+                                                                <lightning-output-field field-name={rColumn.Name} 
+                                                                                        value={rColumn.Value} 
+                                                                                        required={rColumn.Mandatory}>
+                                                                </lightning-output-field>
+                                                            </template>
+                                                            <template lwc:else>
+                                                                <lightning-input-field field-name={rColumn.Name} 
+                                                                                       value={rColumn.Value} 
+                                                                                       required={rColumn.Mandatory} 
+                                                                                       class={rColumn.Mandatory} 
+                                                                                       onfocusout={handleOnFocusOut}
+                                                                                       onchange={handleOnChangeField}>
+                                                                </lightning-input-field>
+                                                            </template>
+                                                        </template>
+                                                        <template lwc:else>
+                                                            <lightning-output-field field-class="slds-col-rule--bottom" 
+                                                                                    field-name={rColumn.Name} 
+                                                                                    value={rColumn.Value} 
+                                                                                    required={rColumn.Mandatory}>
+                                                            </lightning-output-field>
+                                                        </template>
+                                                    </span>
+                                                </div>
+                                            </lightning-layout-item>
+                                        </template>
+                                    </template>
+                                </lightning-layout>
+                            </template>
+                        </lightning-layout-item>
+                    </template>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-record-edit-form>
+    </template>
+</template>

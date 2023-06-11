@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Workflowstepinputstructure60</label>
+    <protected>false</protected>
+    <values>
+        <field>BO_API_Entity_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>BO_API_Workflow_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>BO_Output_Entity_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Business_Object_API_Entity_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>CGCLOUD_CLASSNAME_C__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>CGCLOUD_DESCRIPTION_C__c</field>
+        <value xsi:type="xsd:string">SFDC Id or External Id of the source promotion to be copied.</value>
+    </values>
+    <values>
+        <field>CGCLOUD_ENTITY_C__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>CGCLOUD_METHOD_C__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Enabled__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Input_Mapping_Field__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Location__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Object_Name__c</field>
+        <value xsi:type="xsd:string">cgcloud__BO_API_Step_Input_Structure__c</value>
+    </values>
+    <values>
+        <field>Output_Mapping_Field__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>RecordType__c</field>
+        <value xsi:type="xsd:string">String</value>
+    </values>
+    <values>
+        <field>Required__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Sort__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>cgcloud_BO_API_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>cgcloud_BO_API_Workflow_Step__c</field>
+        <value xsi:type="xsd:string">loadPromotionAttachmentsForCopy2</value>
+    </values>
+    <values>
+        <field>cgcloud_Maps_To_c__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>cgcloud_Maximum_Length_c__c</field>
+        <value xsi:type="xsd:double">40.0</value>
+    </values>
+    <values>
+        <field>cgcloud_Path_c__c</field>
+        <value xsi:type="xsd:string">.Id</value>
+    </values>
+    <values>
+        <field>cgcloud_Pattern__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

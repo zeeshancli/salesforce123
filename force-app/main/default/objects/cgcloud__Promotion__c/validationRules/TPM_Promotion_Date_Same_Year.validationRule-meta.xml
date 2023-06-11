@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Promotion_Date_Same_Year</fullName>
+    <active>true</active>
+    <description>To check if all the Promotion Date Year falls under the Same Year</description>
+    <errorConditionFormula>OR(
+YEAR(cgcloud__Placement_Date_From__c )&lt;&gt;YEAR(cgcloud__Placement_Date_Thru__c ),
+YEAR(cgcloud__Placement_Date_From__c )&lt;&gt;YEAR( cgcloud__Delivery_Date_From__c ),
+YEAR(cgcloud__Placement_Date_From__c )&lt;&gt;YEAR( cgcloud__Delivery_Date_Thru__c ),
+YEAR(cgcloud__Placement_Date_From__c )&lt;&gt;YEAR( cgcloud__Commit_Date__c )
+)</errorConditionFormula>
+    <errorMessage>All the Promotion Date should fall under the Same Year.</errorMessage>
+</ValidationRule>

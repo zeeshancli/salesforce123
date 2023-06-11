@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Restrict_Negative_Tactic_Redemption</fullName>
+    <active>true</active>
+    <description>Validation to restrict negative value is Redemption %.</description>
+    <errorConditionFormula>TPM_Redemption_Pct__c &lt; 0</errorConditionFormula>
+    <errorDisplayField>TPM_Redemption_Pct__c</errorDisplayField>
+    <errorMessage>Negative value is not allowed in Redemption %.</errorMessage>
+</ValidationRule>

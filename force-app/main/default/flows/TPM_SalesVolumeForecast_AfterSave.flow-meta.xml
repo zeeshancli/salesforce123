@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <description>Identify length of SVF Name</description>
+        <name>Identify_length_of_SVF_Name</name>
+        <label>Identify length of SVF Name</label>
+        <locationX>314</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_length_is_8_or_greater</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Length_of_SVF_Name</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>8.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Check_Record_is_new</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Populate_External_ID_for_length_8_or_more</targetReference>
+            </connector>
+            <label>If length is 8 or greater</label>
+        </rules>
+        <rules>
+            <name>If_length_is_less_than_8</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Length_of_SVF_Name</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <numberValue>8.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Check_Record_is_new</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>External_ID_for_length_less_than_8</targetReference>
+            </connector>
+            <label>If length is less than 8</label>
+        </rules>
+    </decisions>
+    <description>Populate External ID for Sale Volume Forecast object from SVF Name</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>Check_Record_is_new</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <description>External_ID_for_Length_8_or_above</description>
+        <name>External_ID_for_Length_8_or_above</name>
+        <dataType>String</dataType>
+        <expression>&quot;AP&quot;+RIGHT({!$Record.Name},{!Length_of_SVF_Name})</expression>
+    </formulas>
+    <formulas>
+        <description>External_ID_for_Lessthan_8</description>
+        <name>External_ID_for_Lessthan_8</name>
+        <dataType>String</dataType>
+        <expression>LEFT(&quot;AP00&quot;,10-{!Length_of_SVF_Name})+RIGHT({!$Record.Name},{!Length_of_SVF_Name})</expression>
+    </formulas>
+    <formulas>
+        <description>Length_of_SVF_Name</description>
+        <name>Length_of_SVF_Name</name>
+        <dataType>Number</dataType>
+        <expression>LEN(RIGHT({!$Record.Name},LEN({!$Record.Name})-FIND(&quot;-&quot;,{!$Record.Name})))</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>TPM_SalesVolumeForecast_AfterSave {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>TPM_SalesVolumeForecast_AfterSave</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Populate External ID for length less than 8 from SVF name</description>
+        <name>External_ID_for_length_less_than_8</name>
+        <label>External ID for length less than 8</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>TPM_ExternalID__c</field>
+            <value>
+                <elementReference>External_ID_for_Lessthan_8</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Populate External ID for length 8 or more from SVF name</description>
+        <name>Populate_External_ID_for_length_8_or_more</name>
+        <label>Populate External ID for length 8 or more</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>TPM_ExternalID__c</field>
+            <value>
+                <elementReference>External_ID_for_Length_8_or_above</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Identify_length_of_SVF_Name</targetReference>
+        </connector>
+        <object>cgcloud__Account_Plan__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

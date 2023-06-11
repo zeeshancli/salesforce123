@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>TPM_AssortmentCreationBatch</label>
+    <protected>false</protected>
+    <values>
+        <field>TPM_BaseQuery__c</field>
+        <value xsi:type="xsd:string">SELECT Id,name, cgcloud__Sales_Org__c, TPM_Hierarchy_Level__c, TPM_Is_Assortment_Created__c FROM Account</value>
+    </values>
+    <values>
+        <field>TPM_BatchSize__c</field>
+        <value xsi:type="xsd:string">200</value>
+    </values>
+    <values>
+        <field>TPM_ProcessName__c</field>
+        <value xsi:type="xsd:string">TPM_AssortmentCreationBatch</value>
+    </values>
+    <values>
+        <field>TPM_QueryCondition__c</field>
+        <value xsi:type="xsd:string">WHERE TPM_Is_Assortment_Created__c = FALSE AND cgcloud__ExternalId__c != null AND cgcloud__Sales_Org__c!= null</value>
+    </values>
+    <values>
+        <field>TPM_Query_Footer__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

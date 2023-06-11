@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Shipment_Date_Thru__c</fullName>
+    <description>Shipment end date of a tactic</description>
+    <externalId>false</externalId>
+    <label>Shipment Date Thru</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layoutAssignments>
+        <layout>Assortment-cgcloud__Assortment Layout 2</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>cgcloud__Account_Plan__c-cgcloud__Customer Business Plan Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>TPM_UI_Definition__c-UI Definition Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account-Vendor Layout</layout>
+        <recordType>Account.TPM_Vendor</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account-cgcloud__Customer Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account-cgcloud__Customer Layout</layout>
+        <recordType>Account.cgcloud__Customer</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>TPM_Approval_Tactics__c-Approval Tactics Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>TPM_Approval_Tactics__c-Approval Tactics Layout</layout>
+        <recordType>TPM_Approval_Tactics__c.TPM_Claim_Tactics</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>TPM_Approval_Tactics__c-Approval Tactics Layout</layout>
+        <recordType>TPM_Approval_Tactics__c.TPM_Promotion_Tactics</recordType>
+    </layoutAssignments>
+</Profile>

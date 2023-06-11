@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>MetaDataWizardIT01</label>
+    <protected>false</protected>
+    <values>
+        <field>TPM_Available_Product_Level__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Configuration__c</field>
+        <value xsi:type="xsd:string">{
+  &quot;size&quot;: &quot;medium&quot;,
+  &quot;title&quot;: &quot;New Promotion&quot;,
+  &quot;columns&quot;: 1,
+  &quot;components&quot;: [
+    {
+      &quot;id&quot;: &quot;promoSlogan&quot;,
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;outputProperty&quot;: &quot;Slogan&quot;,
+      &quot;required&quot;: true,
+      &quot;label&quot;: &quot;Promotion Name&quot;,
+      &quot;maxLength&quot;: 40,
+      &quot;defaultValue&quot;: &quot;{! _input_.Slogan }&quot;
+    },
+    {
+      &quot;id&quot;: &quot;promoTemplate&quot;,
+      &quot;type&quot;: &quot;Picklist&quot;,
+      &quot;required&quot;: true,
+      &quot;outputProperty&quot;: &quot;PromotionTemplate&quot;,
+      &quot;source&quot;: {
+        &quot;class&quot;: &quot;NewPromotionWizardCallable&quot;,
+        &quot;method&quot;: &quot;getPromotionTemplates&quot;,
+        &quot;cache&quot;: true,
+        &quot;params&quot;: {}
+      },
+      &quot;label&quot;: &quot;Promotion Type&quot;,
+      &quot;autoSelectFirstItem&quot;: true,
+      &quot;defaultValue&quot;: &quot;{! _input_.PromotionTemplate}&quot;
+    },
+    {
+      &quot;id&quot;: &quot;promoAnchorAccount&quot;,
+      &quot;type&quot;: &quot;Picklist&quot;,
+      &quot;active&quot;: &quot;{! promoTemplate.AnchorType == &apos;Customer&apos; }&quot;,
+      &quot;visible&quot;: &quot;{! promoTemplate.AnchorType == &apos;Customer&apos; }&quot;,
+      &quot;required&quot;: true,
+      &quot;outputProperty&quot;: &quot;AnchorAccount&quot;,
+      &quot;source&quot;: {
+        &quot;class&quot;: &quot;NewPromotionWizardCallable&quot;,
+        &quot;method&quot;: &quot;getAccounts&quot;,
+        &quot;cache&quot;: true,
+        &quot;params&quot;: {
+          &quot;dateFrom&quot;: &quot;{! promoDateFrom }&quot;,
+          &quot;dateThru&quot;: &quot;{! promoDateThru }&quot;
+        }
+      },
+      &quot;label&quot;: &quot;Customer&quot;,
+      &quot;autoSelectFirstItem&quot;: true,
+      &quot;defaultValue&quot;: &quot;{! _input_.AnchorAccount}&quot;
+    },
+    {
+      &quot;id&quot;: &quot;promoAnchorAccountSet&quot;,
+      &quot;type&quot;: &quot;Picklist&quot;,
+      &quot;active&quot;: &quot;{! promoTemplate.AnchorType == &apos;CustomerSet&apos; }&quot;,
+      &quot;visible&quot;: &quot;{! promoTemplate.AnchorType == &apos;CustomerSet&apos; }&quot;,
+      &quot;required&quot;: true,
+      &quot;outputProperty&quot;: &quot;AnchorAccountSet&quot;,
+      &quot;source&quot;: {
+        &quot;class&quot;: &quot;NewPromotionWizardCallable&quot;,
+        &quot;method&quot;: &quot;getAccountSets&quot;,
+        &quot;cache&quot;: true,
+        &quot;params&quot;: {
+          &quot;dateFrom&quot;: &quot;{! promoDateFrom }&quot;,
+          &quot;dateThru&quot;: &quot;{! promoDateThru }&quot;
+        }
+      },
+      &quot;label&quot;: &quot;Account Set&quot;,
+      &quot;autoSelectFirstItem&quot;: true,
+      &quot;defaultValue&quot;: &quot;{! _input_.AnchorAccountSet}&quot;
+    },
+    {
+      &quot;id&quot;: &quot;promoNoAnchor&quot;,
+      &quot;type&quot;: &quot;Empty&quot;,
+      &quot;visible&quot;: &quot;{! promoTemplate.AnchorType == null }&quot;
+    },
+    {
+      &quot;id&quot;: &quot;promoNoProduct&quot;,
+      &quot;type&quot;: &quot;Empty&quot;,
+      &quot;visible&quot;: &quot;{! promoTemplate.ProductDefinitionLevel != &apos;Promotion&apos; }&quot;
+    },
+    {
+      &quot;id&quot;: &quot;promoDateFrom&quot;,
+      &quot;type&quot;: &quot;Date&quot;,
+      &quot;label&quot;: &quot;Instore Start Date&quot;,
+      &quot;outputProperty&quot;: &quot;DateFrom&quot;,
+      &quot;required&quot;: true,
+      &quot;defaultValue&quot;: &quot;{! _input_.initialDate || &apos;today&apos; }&quot;
+    },
+    {
+      &quot;id&quot;: &quot;promoDateThru&quot;,
+      &quot;type&quot;: &quot;Date&quot;,
+      &quot;label&quot;: &quot;Instore Thru Date&quot;,
+      &quot;outputProperty&quot;: &quot;DateThru&quot;,
+      &quot;required&quot;: true,
+      &quot;defaultValue&quot;: &quot;{! _input_.initialDate || &apos;today&apos; }&quot;
+    }
+  ],
+  &quot;footerLeftButtons&quot;: [
+    &quot;cancel&quot;
+  ],
+  &quot;footerRightButtons&quot;: [
+    {
+      &quot;type&quot;: &quot;saveAndCopy&quot;,
+      &quot;brand&quot;: &quot;neutral&quot;,
+      &quot;label&quot;: &quot;Save &amp; Copy&quot;
+    },
+    {
+      &quot;type&quot;: &quot;saveAndEdit&quot;,
+      &quot;brand&quot;: &quot;neutral&quot;,
+      &quot;label&quot;: &quot;Save &amp; Edit&quot;
+    },
+    {
+      &quot;type&quot;: &quot;submit&quot;,
+      &quot;brand&quot;: &quot;brand&quot;,
+      &quot;label&quot;: &quot;Save&quot;
+    }
+  ]
+}</value>
+    </values>
+    <values>
+        <field>TPM_Customer_Template_Planning_Mode__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Friday__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Initial_Roles__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Monday__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Name__c</field>
+        <value xsi:type="xsd:string">NewPromotion</value>
+    </values>
+    <values>
+        <field>TPM_No_of_years__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_ObjectName__c</field>
+        <value xsi:type="xsd:string">cgcloud__Metadata_Wizard_Configuration__c</value>
+    </values>
+    <values>
+        <field>TPM_Sales_Org__c</field>
+        <value xsi:type="xsd:string">IT01</value>
+    </values>
+    <values>
+        <field>TPM_Saturday__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Start_Year__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Sunday__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Thursday__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Tuesday__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Wednesday__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

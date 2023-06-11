@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Order_Template_Product_Selector_Group__c.cgcloud__Default__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Order_Template_Product_Selector_Group__c.cgcloud__Level_1__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Order_Template_Product_Selector_Group__c.cgcloud__Level_2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>cgcloud__Order_Template_Product_Selector_Group__c.cgcloud__Record_Link__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+</Profile>

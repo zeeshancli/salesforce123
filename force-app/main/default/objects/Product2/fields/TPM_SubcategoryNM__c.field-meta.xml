@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_SubcategoryNM__c</fullName>
+    <description>Indicates the name of the Duracell Subcategory</description>
+    <externalId>false</externalId>
+    <label>Sub Category Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Primary Major Cells</fullName>
+                <default>false</default>
+                <label>Primary Major Cells</label>
+            </value>
+            <value>
+                <fullName>Specialty Alkaline</fullName>
+                <default>false</default>
+                <label>Specialty Alkaline</label>
+            </value>
+            <value>
+                <fullName>HP Lithium</fullName>
+                <default>false</default>
+                <label>HP Lithium</label>
+            </value>
+            <value>
+                <fullName>Lithium Coin</fullName>
+                <default>false</default>
+                <label>Lithium Coin</label>
+            </value>
+            <value>
+                <fullName>Silver Oxide</fullName>
+                <default>false</default>
+                <label>Silver Oxide</label>
+            </value>
+            <value>
+                <fullName>Hearing Aid (Zinc Air)</fullName>
+                <default>false</default>
+                <label>Hearing Aid (Zinc Air)</label>
+            </value>
+            <value>
+                <fullName>Mixed</fullName>
+                <default>false</default>
+                <label>Mixed</label>
+            </value>
+            <value>
+                <fullName>Rechargeable Major Cells</fullName>
+                <default>false</default>
+                <label>Rechargeable Major Cells</label>
+            </value>
+            <value>
+                <fullName>Charger</fullName>
+                <default>false</default>
+                <label>Charger</label>
+            </value>
+            <value>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+                <label>Mobile</label>
+            </value>
+            <value>
+                <fullName>Wireless</fullName>
+                <default>false</default>
+                <label>Wireless</label>
+            </value>
+            <value>
+                <fullName>Intermediates</fullName>
+                <default>false</default>
+                <label>Intermediates</label>
+            </value>
+            <value>
+                <fullName>Financial</fullName>
+                <default>false</default>
+                <label>Financial</label>
+            </value>
+            <value>
+                <fullName>Historical</fullName>
+                <default>false</default>
+                <label>Historical</label>
+            </value>
+            <value>
+                <fullName>Not Duracell Product</fullName>
+                <default>false</default>
+                <label>Not Duracell Product</label>
+            </value>
+            <value>
+                <fullName>PORTABLE POWER STATION</fullName>
+                <default>false</default>
+                <label>PORTABLE POWER STATION</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

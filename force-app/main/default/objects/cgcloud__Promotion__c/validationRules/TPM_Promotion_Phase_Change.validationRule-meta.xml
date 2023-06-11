@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Promotion_Phase_Change</fullName>
+    <active>false</active>
+    <description>User cannot choose Submit for Approval until the Promotion is in Planning status</description>
+    <errorConditionFormula>NOT(ISPICKVAL(PRIORVALUE( TPM_Phase__c ), &quot;Planning&quot;)) &amp;&amp; ISPICKVAL(TPM_Phase__c, &quot;Submitted For Approval&quot;)</errorConditionFormula>
+    <errorMessage>You cannot choose Submit for Approval until the Promotion is in Planning status.</errorMessage>
+</ValidationRule>

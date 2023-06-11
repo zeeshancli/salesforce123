@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_PaymentInfo_Cannot_be_null</fullName>
+    <active>true</active>
+    <description>Incase the payment method is not OI,  then the payment info cannot be null.</description>
+    <errorConditionFormula>IF( AND(ISPICKVAL(cgcloud__Tactic_Template__r.cgcloud__Sales_Org__c, &apos;IT01&apos;),NOT(ISPICKVAL(cgcloud__Payment_Method__c, &apos;OI&apos;)),ISBLANK(TEXT(TPM_Payment_Info__c))) , true, false)</errorConditionFormula>
+    <errorMessage>Payment Info is required to be not null for all tactics where the spend type is not OI</errorMessage>
+</ValidationRule>

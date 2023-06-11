@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Is_Assortment_Created__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field identifies whether assortment has been created for the account.</description>
+    <externalId>false</externalId>
+    <label>Is Assortment Created</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

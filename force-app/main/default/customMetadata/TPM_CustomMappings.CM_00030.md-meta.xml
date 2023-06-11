@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>CM-00030</label>
+    <protected>false</protected>
+    <values>
+        <field>TPM_Key__c</field>
+        <value xsi:type="xsd:string">Closed</value>
+    </values>
+    <values>
+        <field>TPM_ProcessName__c</field>
+        <value xsi:type="xsd:string">TPM_TPCTriggerHelper</value>
+    </values>
+    <values>
+        <field>TPM_Sequence_Number__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Sequence__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TPM_Value__c</field>
+        <value xsi:type="xsd:string">Approved</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Is_Display__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checkbox based on the BOM field on Promotion</description>
+    <externalId>false</externalId>
+    <label>Is Display</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

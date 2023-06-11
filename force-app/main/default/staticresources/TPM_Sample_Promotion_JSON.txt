@@ -1,0 +1,144 @@
+{
+        "Columns":  [{
+                        "Title": "Promotion Information",
+                        "CRows": [{
+                                        "RColumns": [{
+                                                "Type": "Field",
+                                                "Name": "cgcloud__Slogan_Language_1__c",
+                                                "Mandatory": true,
+                                                "FullWidth": true
+                                        }]
+                                },
+                                {
+                                        "RColumns": [{
+                                                "Type": "Field",
+                                                "Name": "cgcloud__ExternalId__c",
+                                                "Mandatory": false,
+                                                "ReadOnly": true,
+                                                "FullWidth": true
+                                        }]
+                                },
+                                {
+                                        "RColumns": [{
+                                                "Type": "Field",
+                                                "Name": "cgcloud__Note__c",
+                                                "Mandatory": false,
+                                                "FullWidth": true
+                                        }]
+                                },
+                                {
+                                        "RColumns": [{
+                                                "Type": "Field",
+                                                "Name": "TPM_Planned_Spend__c",
+                                                "Mandatory": false,
+                                                "ReadOnly": true,
+                                                "FullWidth": true
+                                        }]
+                                }
+                        ]
+                },
+                {
+                        "Title": "Dates",
+                        "CRows": [{
+                                "RColumns": [{
+                                                "Type": "Field",
+                                                "Name": "cgcloud__Placement_Date_From__c",
+                                                "Mandatory": true
+
+                                        },
+                                        {
+                                                "Type": "Field",
+                                                "Name": "cgcloud__Placement_Date_Thru__c",
+                                                "Mandatory": true
+
+                                        },
+                                        {
+                                                "Type": "Field",
+                                                "Name": "cgcloud__Delivery_Date_From__c",
+                                                "Mandatory": true
+
+
+                                        },
+                                        {
+                                                "Type": "Field",
+                                                "Name": "cgcloud__Delivery_Date_Thru__c",
+                                                "Mandatory": true
+
+
+                                        },
+                                        {
+                                                "Type": "Field",
+                                                "Name": "cgcloud__Commit_Date__c",
+                                                "Mandatory": false,
+                                                "ReadOnly": true,
+                                                "FullWidth": true
+                                        }
+                                ]
+                        }]
+                },
+
+                {
+                        "Title": "Status",
+                        "CRows": [{
+                                        "RColumns": [{
+                                                        "Type": "Field",
+                                                        "Name": "cgcloud__Phase__c",
+                                                        "Mandatory": true,
+                                                        "FullWidth": true
+                                                }
+
+                                        ]
+
+                                },
+                                {
+                                        "RColumns": [{
+                                                "Type": "Field",
+                                                "Name": "cgcloud__Active__c",
+                                                "Mandatory": false
+                                        }]
+                                },
+                                {
+                                        "RColumns": [{
+                                                "Type": "Field",
+                                                "Name": "TPM_Last_Approved_Date__c",
+                                                "Mandatory": false,
+                                                "ReadOnly": true,
+                                                "FullWidth": true
+                                        }]
+                                }
+                        ]
+                },
+
+                {
+                        "Title": "Anchor",
+                        "CRows": [{
+                                        "RColumns": [{
+                                                "Type": "Field",
+                                                "Name": "cgcloud__Anchor_Account__c",
+                                                "Mandatory": false,
+                                                "ReadOnly": true,
+                                                "FullWidth": true
+                                        }]
+                                },
+                                {
+                                        "RColumns": [{
+                                                "Type": "Field",
+                                                "Name": "TPM_SVF__c",
+                                                "Mandatory": false,
+                                                "ReadOnly": true,
+                                                "FullWidth": true
+                                        }]
+                                },
+                                {
+                                        "RColumns": [{
+                                                "Type": "Field",
+                                                "Name": "cgcloud__Promotion_Template_Description__c",
+                                                "Mandatory": false,
+                                                "ReadOnly": true,
+                                                "FullWidth": true
+                                        }]
+                                }
+                        ]
+                }
+        ]
+}

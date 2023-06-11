@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Alternative</fullName>
+        <default>false</default>
+        <label>Alternative</label>
+    </customValue>
+    <customValue>
+        <fullName>Amazon</fullName>
+        <default>false</default>
+        <label>Amazon</label>
+    </customValue>
+    <customValue>
+        <fullName>Argentina</fullName>
+        <default>false</default>
+        <label>Argentina</label>
+    </customValue>
+    <customValue>
+        <fullName>Australia/NewZealand</fullName>
+        <default>false</default>
+        <label>Australia/NewZealand</label>
+    </customValue>
+    <customValue>
+        <fullName>BNL</fullName>
+        <default>false</default>
+        <label>BNL</label>
+    </customValue>
+    <customValue>
+        <fullName>Brazil</fullName>
+        <default>false</default>
+        <label>Brazil</label>
+    </customValue>
+    <customValue>
+        <fullName>Central Europe</fullName>
+        <default>false</default>
+        <label>Central Europe</label>
+    </customValue>
+    <customValue>
+        <fullName>Chile</fullName>
+        <default>false</default>
+        <label>Chile</label>
+    </customValue>
+    <customValue>
+        <fullName>China</fullName>
+        <default>false</default>
+        <label>China</label>
+    </customValue>
+    <customValue>
+        <fullName>Club</fullName>
+        <default>false</default>
+        <label>Club</label>
+    </customValue>
+    <customValue>
+        <fullName>Costco</fullName>
+        <default>false</default>
+        <label>Costco</label>
+    </customValue>
+    <customValue>
+        <fullName>DACH</fullName>
+        <default>false</default>
+        <label>DACH</label>
+    </customValue>
+    <customValue>
+        <fullName>Distributor Operation</fullName>
+        <default>false</default>
+        <label>Distributor Operation</label>
+    </customValue>
+    <customValue>
+        <fullName>Drug</fullName>
+        <default>false</default>
+        <label>Drug</label>
+    </customValue>
+    <customValue>
+        <fullName>Dubai Hub</fullName>
+        <default>false</default>
+        <label>Dubai Hub</label>
+    </customValue>
+    <customValue>
+        <fullName>France</fullName>
+        <default>false</default>
+        <label>France</label>
+    </customValue>
+    <customValue>
+        <fullName>Global OEM</fullName>
+        <default>false</default>
+        <label>Global OEM</label>
+    </customValue>
+    <customValue>
+        <fullName>Home/Hardware</fullName>
+        <default>false</default>
+        <label>Home/Hardware</label>
+    </customValue>
+    <customValue>
+        <fullName>Hong Kong</fullName>
+        <default>false</default>
+        <label>Hong Kong</label>
+    </customValue>
+    <customValue>
+        <fullName>India</fullName>
+        <default>false</default>
+        <label>India</label>
+    </customValue>
+    <customValue>
+        <fullName>Italy</fullName>
+        <default>false</default>
+        <label>Italy</label>
+    </customValue>
+    <customValue>
+        <fullName>LA Comm Oth</fullName>
+        <default>false</default>
+        <label>LA Comm Oth</label>
+    </customValue>
+    <customValue>
+        <fullName>Mass</fullName>
+        <default>false</default>
+        <label>Mass</label>
+    </customValue>
+    <customValue>
+        <fullName>Mexico</fullName>
+        <default>false</default>
+        <label>Mexico</label>
+    </customValue>
+    <customValue>
+        <fullName>OEM Consumer</fullName>
+        <default>false</default>
+        <label>OEM Consumer</label>
+    </customValue>
+    <customValue>
+        <fullName>P. AFTMKT AMERICAS</fullName>
+        <default>false</default>
+        <label>P. AFTMKT AMERICAS</label>
+    </customValue>
+    <customValue>
+        <fullName>P. AFTMKT ASIA</fullName>
+        <default>false</default>
+        <label>P. AFTMKT ASIA</label>
+    </customValue>
+    <customValue>
+        <fullName>P. AFTMKT EUROPE</fullName>
+        <default>false</default>
+        <label>P. AFTMKT EUROPE</label>
+    </customValue>
+    <customValue>
+        <fullName>P. OEM ASIA</fullName>
+        <default>false</default>
+        <label>P. OEM ASIA</label>
+    </customValue>
+    <customValue>
+        <fullName>P. OEM EUROPE</fullName>
+        <default>false</default>
+        <label>P. OEM EUROPE</label>
+    </customValue>
+    <customValue>
+        <fullName>P.OEM AMERICAS</fullName>
+        <default>false</default>
+        <label>P.OEM AMERICAS</label>
+    </customValue>
+    <customValue>
+        <fullName>PORTPWRSTN</fullName>
+        <default>false</default>
+        <label>PORTPWRSTN</label>
+    </customValue>
+    <customValue>
+        <fullName>Russia</fullName>
+        <default>false</default>
+        <label>Russia</label>
+    </customValue>
+    <customValue>
+        <fullName>South Africa</fullName>
+        <default>false</default>
+        <label>South Africa</label>
+    </customValue>
+    <customValue>
+        <fullName>South Korea</fullName>
+        <default>false</default>
+        <label>South Korea</label>
+    </customValue>
+    <customValue>
+        <fullName>Spain</fullName>
+        <default>false</default>
+        <label>Spain</label>
+    </customValue>
+    <customValue>
+        <fullName>Taiwan</fullName>
+        <default>false</default>
+        <label>Taiwan</label>
+    </customValue>
+    <customValue>
+        <fullName>Turkey</fullName>
+        <default>false</default>
+        <label>Turkey</label>
+    </customValue>
+    <customValue>
+        <fullName>UK</fullName>
+        <default>false</default>
+        <label>UK</label>
+    </customValue>
+    <customValue>
+        <fullName>US Food</fullName>
+        <default>false</default>
+        <label>US Food</label>
+    </customValue>
+    <customValue>
+        <fullName>Walmart</fullName>
+        <default>false</default>
+        <label>Walmart</label>
+    </customValue>
+    <customValue>
+        <fullName>ADO</fullName>
+        <default>false</default>
+        <label>ADO</label>
+    </customValue>
+    <customValue>
+        <fullName>Alternative US</fullName>
+        <default>false</default>
+        <label>Alternative US</label>
+    </customValue>
+    <description>SubSegment of the customer</description>
+    <masterLabel>Subsegment</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

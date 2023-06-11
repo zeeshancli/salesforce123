@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_ObjectName__c</fullName>
+    <description>Object Name</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <label>Object Name</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>cgcloud__Business_Year__c</fullName>
+                <default>true</default>
+                <label>cgcloud__Business_Year__c</label>
+            </value>
+            <value>
+                <fullName>cgcloud__Account_Template__c</fullName>
+                <default>false</default>
+                <label>cgcloud__Account_Template__c</label>
+            </value>
+            <value>
+                <fullName>cgcloud__Metadata_Wizard_Configuration__c</fullName>
+                <default>false</default>
+                <label>cgcloud__Metadata_Wizard_Configuration__c</label>
+            </value>
+            <value>
+                <fullName>cgcloud__Week_Day_Share_Profile__c</fullName>
+                <default>false</default>
+                <label>cgcloud__Week_Day_Share_Profile__c</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

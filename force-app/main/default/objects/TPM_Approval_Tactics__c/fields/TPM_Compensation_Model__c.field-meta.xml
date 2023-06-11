@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPM_Compensation_Model__c</fullName>
+    <description>Which compensation model should be used for a tactic</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Rule to calculate promotion spend</inlineHelpText>
+    <label>Rate Basis</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>LumpSum</fullName>
+                <default>true</default>
+                <label>LumpSum</label>
+            </value>
+            <value>
+                <fullName>WeeklyLumpSum</fullName>
+                <default>false</default>
+                <label>WeeklyLumpSum</label>
+            </value>
+            <value>
+                <fullName>PerCase</fullName>
+                <default>false</default>
+                <label>PerCase</label>
+            </value>
+            <value>
+                <fullName>Percentage</fullName>
+                <default>false</default>
+                <label>Percentage</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

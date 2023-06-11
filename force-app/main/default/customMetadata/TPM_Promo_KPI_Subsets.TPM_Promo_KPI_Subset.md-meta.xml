@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>TPM_Promo_KPI_Subset</label>
+    <protected>false</protected>
+    <values>
+        <field>TPM_Subset__c</field>
+        <value xsi:type="xsd:string">Planning;BaselineManagementPacks;BaselineManagementCells;BaselineManagementCases;BaselineManagementGIV;TotalVolumePlanningPacks;TotalVolumePlanningCases;TotalVolumePlanningCells;TotalVolumePlanningGIV;CellsPromoPL;CasesPromoPL</value>
+    </values>
+</CustomMetadata>

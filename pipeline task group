@@ -1,0 +1,654 @@
+1 build dx package by tag or branch differencer
+# @author: Liquad Li
+# @date: 2020-04-15
+# @description: build DX package by difference from a tag.
+
+<#
+$env:BUILD_SOURCEBRANCH = "refs/heads/test/updatestaticres"
+#$env:BUILD_SOURCEBRANCH = "refs/tags/send_order_to_appd"
+$env:SF_TAG_NAME = "origin/master"
+$env:BUILD_SOURCESDIRECTORY = "."
+$env:BUILD_STAGINGDIRECTORY = "C:\temp\dx-stage2"
+$env:SF_DEPLOY_PROFILE = "true"
+$env:SF_CREATE_ROLLBACK = "false"
+#>
+
+cd $env:BUILD_SOURCESDIRECTORY
+
+if ($env:SF_TAG_NAME.StartsWith("refs/heads/")) {
+    $env:SF_TAG_NAME = "origin/" + $env:SF_TAG_NAME.SubString(11)
+}
+
+Write-Host $env:BUILD_SOURCEBRANCH
+
+git config diff.renames 0
+git config advice.detachedHead false
+git config core.quotePath false
+$env:GIT_REDIRECT_STDERR = '2>&1'
+
+# @author: Liquad Li
+# @description: Get all files/folders for the package by changed files.
+function Get-PackageFiles {
+    param (        
+        $allChanges
+    )
+
+    process {
+
+        #-meta.xml file also need copy for postfix
+        $MetaMapExt2Folder=@{
+            cls                      = @{type="ApexClass";folder="classes"};
+            page                     = @{type="ApexPage";folder="pages"};
+            component                = @{type="ApexComponent";folder="components"};
+            trigger                  = @{type="ApexTrigger";folder="triggers"};
+
+            email                    = @{type="EmailTemplate";folder="email"};
+         
+            wdf                      = @{type="WaveDataflow";folder="wave"};
+            wdash                    = @{type="WaveDashboard";folder="wave"};
+            wlens                    = @{type="WaveLens";folder="wave"};
+        }
+
+        #whole folder need copy
+        $FolderMap=@{
+            lwc                      = @{type="LightningComponentBundle"};
+            aura                     = @{type="AuraDefinitionBundle"};
+            objectTranslations       = @{type="CustomObjectTranslation"};
+            staticresources          = @{type="StaticResource";postfix="resource";needcopymeta="true"};
+            experiences               = @{type="ExperienceBundle";postfix="site";needcopymeta="true"};
+        }
+
+        #-meta.xml file also need copy for folder
+        $FolderNeedCopyMetaFile = @{
+            siteDotComSites          = @{type="SiteDotCom";postfix="site"};
+        }
+        
+        $changeset = @()
+        Write-Host "allChanges.Count:" $allChanges.Count
+
+        foreach($path in $allChanges) {
+
+            if($path.Contains("$(SF_SRC_DIR)/main/default/")){
+                #$path = [System.Text.Encoding]::UTF8.GetString([System.Text.Encoding]::Default.GetBytes($path))
+
+                $filepath = $path -replace "$(SF_SRC_DIR)/main/default/",""
+
+                if ($filepath -inotmatch "/") {
+                    Write-Host "Ignored files: $path"
+                    $path | Out-File -Append "$env:BUILD_STAGINGDIRECTORY/filesIgnored.txt"
+                    continue
+                }
+
+                #e.g. report/<reportfolder>/xxxxxx.yyy.report-meta.xml
+                #e.g. report
+                $folderName = ($filepath -split "/")[0]
+                #Write-Host $path
+
+                #e.g. <reportfolder>/xxxxxx.yyy.report-meta.xml
+                $fileName = $filepath.SubString($folderName.Length+1)
+
+                #e.g. <reportfolder>/xxxxxx.yyy.report
+                if ($fileName.EndsWith("-meta.xml")){
+                    $fileName = $fileName.SubString(0, $fileName.Length - 9)
+                }
+
+                #e.g. xxxx.yyy.md
+                $fileParts = $fileName.Split("\.")
+                if ($fileParts.Count -eq 1){
+                    Write-Host "Ignored files: $path"
+                    $path | Out-File -Append "$env:BUILD_STAGINGDIRECTORY/filesIgnored.txt"
+                    continue
+                }
+                $postfix = $fileParts[$fileParts.Length-1]
+                
+                #Event/validationRules
+                #e.g. <reportfolder>/xxxxxx.yyy
+                $member = $fileName.SubString(0, $fileName.Length - $postfix.Length -1)
+              
+                if($FolderMap.ContainsKey($folderName)){
+                    $metaType = $FolderMap[$folderName].type
+                    
+                    if ($member -imatch "/") {
+                        $member = $fileName.Split("/")[0]
+                    }
+                    
+                    $needCopy = "$folderName/$member"
+
+                    if (-not($changeset.Contains($needCopy))){
+                        $changeset += $needCopy
+                        Write-Host $needCopy
+                    }
+
+                    if ($FolderMap[$folderName].needcopymeta){
+                        $metafilePostFix = $FolderMap[$folderName].postfix
+                        $needCopy = "$folderName/$member.$metafilePostFix-meta.xml"
+
+                        if (-not($changeset.Contains($needCopy))){
+                            $changeset += $needCopy
+                            Write-Host $needCopy
+                        }                        
+                    }
+                   
+                }
+                elseif(($MetaMapExt2Folder.ContainsKey($postfix)) -or ($FolderNeedCopyMetaFile.ContainsKey($folderName))){
+
+                    $needCopy = $filepath
+
+                    if (-not($changeset.Contains($needCopy))){
+                        $changeset += $needCopy
+                        Write-Host $needCopy
+                    }
+
+                    if ($filepath.EndsWith("-meta.xml")){
+                        $needCopy = $filepath.SubString(0, $filepath.Length-9)
+                    }else {
+                        $needCopy = "$filepath-meta.xml"
+                    }
+
+                    if (-not($changeset.Contains($needCopy))){
+                        $changeset += $needCopy
+                        Write-Host $needCopy
+                    }
+                }
+                else{
+                    $needCopy = $filepath
+                    if (-not($changeset.Contains($needCopy))){
+                        $changeset += $needCopy
+                        Write-Host $needCopy
+                    }
+                }
+            }
+        }
+
+        $changeset
+    }
+}
+
+# @author: Liquad Li
+# @description: Build the package by copying files to destination.
+function Copy-Files {
+    param (
+        $changeset,
+        $srcParent,
+        $destParent
+        )
+    process {
+        foreach($item in $changeset){
+            $srcPath = Join-Path -Path $srcParent -ChildPath $item
+            Write-Host "Processing $srcPath"
+
+            $destFile = Join-Path -Path $destParent -ChildPath $item
+            if (Test-Path -Path $srcPath -PathType Container) {
+                           
+                Copy-Item -Path $srcPath -Destination $destFile -Recurse -Force
+
+            }elseif (Test-Path -Path $srcPath){
+
+                $destPath = Split-Path -Path $destFile
+
+                if (-not(Test-Path -Path $destPath -PathType Container)){
+                    md $destPath | Out-Null
+                }
+
+                Copy-Item -Path $srcPath -Destination $destFile -Force
+            }elseif (($srcPath.IndexOf("\staticresources\") -gt 1) -and (Test-Path -Path ($srcPath + ".*") -Exclude "*.resource-meta.xml")){
+                # single file static res
+                $srcPath = Get-Item -Path ($srcPath + ".*") -Exclude "*.resource-meta.xml"
+                $fileName = Split-Path -Path $srcPath -Leaf
+                $destPath = Split-Path -Path $destFile
+                $destFile = Join-Path -Path $destPath -ChildPath $fileName
+
+                if (-not(Test-Path -Path $destPath -PathType Container)){
+                    md $destPath | Out-Null
+                }
+
+                Copy-Item -Path $srcPath -Destination $destFile -Force
+            }else{
+                Write-Host "Missing files: $srcPath"
+                $srcPath | Out-File -Append "$env:BUILD_STAGINGDIRECTORY/missingFiles.txt"
+            }
+        }
+    }
+}
+
+# @author: Liquad Li
+# @description: Build the package by copying files to destination.
+function mergeCustomLabel {
+    param (
+        $customLabelPath = "$(SF_SRC_DIR)/main/default/labels"
+        )
+    process {
+
+            $postfix = ".labels-meta.xml"
+            $filename = "CustomLabels" + $postfix
+            $nodename = "CustomLabels.labels"
+            $folder = "labels"
+
+            $wholeFilePath = "$customLabelPath/$filename"
+
+         if (-not(Test-Path -Path $customLabelPath)){
+            return
+         }
+
+         $allFiles = Get-ChildItem -Path $customLabelPath
+         if ($allFiles.Count -eq 0) {
+            return
+         }elseif ($allFiles.Count -eq 1){
+            Move-Item -Path $allFiles[0].PSPath -Destination $wholeFilePath -Force
+            return
+         }
+
+         $allNodes = [xml](Get-Content $allFiles[0].PSPath -Encoding UTF8)
+         Remove-Item -Path $allFiles[0].PSPath
+
+         for($index=1;$index -lt $allFiles.Count; $index++) {
+            $filepath = $allFiles[$index].PSPath
+
+            if ($filepath -eq $wholeFilePath){
+                continue
+            }
+
+            #get xml data via filename
+            [xml]$xmldata = (Get-Content $filepath -Encoding UTF8)
+            $nodes = Invoke-Expression "`$xmldata.$nodename"
+
+            foreach($subj in $nodes) {
+                $newNode = $allNodes.ImportNode($subj, $true)
+                $allNodes.ChildNodes[1].AppendChild($newNode) | Out-Null
+            }
+
+            Remove-Item -Path $filepath
+         }
+
+         if(-Not (Test-Path -Path $customLabelPath)){
+            md $customLabelPath
+         }
+
+         $allNodes.Save($wholeFilePath)
+
+     }
+}
+
+function merge-Translations {
+    param (
+        $typePath = "$(SF_SRC_DIR)/main/default/translations",
+        $language
+        )
+    process {
+         $folder = "translations"
+         $postfix = ".translation-meta.xml"
+         $filename = $language + $postfix
+         $wholeFilePath = "$typePath/$filename"
+
+         if (-not(Test-Path -Path $typePath)){
+            return
+         }
+         Write-Host "Merging $typePath"
+         $allFiles = Get-ChildItem -Path "$typePath/*.$filename"
+         $fileCount = $allFiles.Count
+         Write-Host "Found files: $fileCount"
+         if ($allFiles.Count -eq 0) {
+            Write-Host "No files to be merged"
+            return
+         }
+
+         
+        $header = '<?xml version="1.0" encoding="utf-8"?>' + "`r`n" + '<Translations xmlns="http://soap.sforce.com/2006/04/metadata">'
+        $footer = "`r`n</Translations>"
+        $intent = "    "
+        $xmlns = ' xmlns="http://soap.sforce.com/2006/04/metadata"'
+
+        $labelBodies = ""
+        for($index=0;$index -lt $allFiles.Count; $index++) {
+            $filepath = $allFiles[$index].PSPath
+
+            if ($filepath -eq $wholeFilePath){
+                continue
+            }
+            Write-Host "Processing $filepath"
+
+            #get xml data via filename
+            [xml]$xmldata = (Get-Content $filepath -Encoding UTF8)
+            $nodes = $xmldata.Translations.ChildNodes
+
+            foreach($subj in $nodes) {
+                $labelBodies += "`r`n" + $intent + $subj.OuterXml.Replace($xmlns, '')
+            }
+
+            Remove-Item -Path $filepath
+         }
+
+         if(-Not (Test-Path -Path $typePath)){
+            md $typePath
+         }
+
+         $wholeContent = $header + $labelBodies + $footer
+         Set-Content -Path $wholeFilePath -Value $wholeContent -Encoding UTF8
+     }
+}
+
+function merge-Profile {
+    param (
+        $profileSubPath = "$(SF_SRC_DIR)/main/default/profiles/<profileName>",
+        $removeSrc = $false
+        )
+    process {
+            $folder = "profiles"
+            $rootNode = "Profile"
+            $postfix = ".profile-meta.xml"
+            $profileName = Split-Path -Path $profileSubPath -Leaf
+            $typePath = Split-Path -Path $profileSubPath
+            $filename = $profileName + $postfix
+
+            $wholeFilePath = Join-Path -Path $typePath -ChildPath $filename
+
+         if (-not(Test-Path -Path $profileSubPath)){
+            return
+         }
+
+        $settings = New-Object System.Xml.XmlWriterSettings
+        $settings.IndentChars = "    "
+        $settings.Indent = $true
+        $settings.Encoding = New-Object System.Text.UTF8Encoding($false)
+        Write-Host "Merging $profileSubPath"
+         $allFiles = Get-ChildItem -Path "$profileSubPath/*$postfix"
+         $fileCount = $allFiles.Count
+         Write-Host "Found files: $fileCount"
+         if ($allFiles.Count -eq 0) {
+            Write-Host "No files to be merged"
+            Remove-Item -Path $profileSubPath -Force
+            return
+         }elseif ($allFiles.Count -eq 1){
+            Move-Item -Path $allFiles[0].PSPath -Destination $wholeFilePath -Force
+            Remove-Item -Path $profileSubPath -Force
+            return
+         }
+
+         $allNodes = [xml](Get-Content $allFiles[0].PSPath -Encoding UTF8)
+
+         for($index=1;$index -lt $allFiles.Count; $index++) {
+            $filepath = $allFiles[$index].PSPath
+
+            if ($filepath -eq $wholeFilePath){
+                continue
+            }
+
+            Write-Host "Processing $filepath"
+
+            #get xml data via filename
+            [xml]$xmldata = (Get-Content $filepath -Encoding UTF8)
+            $nodes = $xmldata.$rootNode.ChildNodes
+
+            foreach($subj in $nodes) {
+                $newNode = $allNodes.ImportNode($subj, $true)
+                $allNodes.ChildNodes[1].AppendChild($newNode) | Out-Null
+            }
+         }
+
+         if(-Not (Test-Path -Path $typePath)){
+            md $typePath
+         }
+
+         $allNodes.Save([System.Xml.XmlWriter]::Create($wholeFilePath, $settings))
+
+         if ($removeSrc) {
+            Remove-Item -Path $profileSubPath -Force -Recurse
+         }
+     }
+}
+
+function merge-ProfileInFolder {
+    param ($Path)
+    process {
+        if (-not(Test-Path -Path $Path -PathType Container)){
+            return
+        }
+        $allFiles = Get-ChildItem -Path $Path -Directory
+        $allFilesCount = $allFiles.Count
+        Write-Host "All profiles count: $allFilesCount"
+
+        foreach ($oneFile in $allFiles) {
+            merge-Profile -profileSubPath $oneFile.FullName -removeSrc $true
+        }
+    }
+}
+
+function NothingToDeploy(){
+    Write-Host "Nothing need to deployed"
+    $nodeploy = "true"
+    Write-Host "##vso[task.setvariable variable=env:SF_NO_DEPLOY]$nodeploy"
+}
+
+function CheckFatalError {
+    param (        
+        $allChanges
+    )
+    process {
+        foreach ($one in $allChanges) {
+          if ($one.StartsWith("fatal:")){
+            Write-Host $allChanges
+            throw "Fatal errors"
+          }
+          
+          return
+        }
+    }
+}
+
+
+if(-not(Test-path -Path "$env:BUILD_STAGINGDIRECTORY\package")){
+    New-Item -ItemType Directory -Force "$env:BUILD_STAGINGDIRECTORY\package" | Out-Null
+}
+
+$xmlNameDestructive = "destructiveChanges"
+$xmlNamePackage = "package"
+$nothingToDeploy = "Nothing need to deployed"
+
+#Package
+Write-Host "`r`nStarting building package"
+$allChanges = &git diff --name-only $env:SF_TAG_NAME --diff-filter=d
+if (-not($allChanges)){
+    NothingToDeploy
+    return
+}
+
+CheckFatalError($allChanges)
+
+if ($allChanges.Count -gt 0){
+    $changeset = Get-PackageFiles -allChanges $allChanges 
+    if (-not($changeset)){
+        NothingToDeploy
+        return
+    }
+
+    if ($changeset.Count -gt 0) {
+        Copy-Files -changeset $changeset -srcParent $env:BUILD_SOURCESDIRECTORY/$(SF_SRC_DIR)/main/default -destParent $env:BUILD_STAGINGDIRECTORY/package/$(SF_SRC_DIR)/main/default
+        mergeCustomLabel -customLabelPath $env:BUILD_STAGINGDIRECTORY/package/$(SF_SRC_DIR)/main/default/labels
+        merge-Translations -language "es_MX" -typePath $env:BUILD_STAGINGDIRECTORY/package/$(SF_SRC_DIR)/main/default/translations
+        merge-Translations -language "en_US" -typePath $env:BUILD_STAGINGDIRECTORY/package/$(SF_SRC_DIR)/main/default/translations
+        merge-Translations -language "pt_BR" -typePath $env:BUILD_STAGINGDIRECTORY/package/$(SF_SRC_DIR)/main/default/translations
+        merge-ProfileInFolder -Path $env:BUILD_STAGINGDIRECTORY/package/$(SF_SRC_DIR)/main/default/profiles
+        Copy-Item -Path $env:BUILD_SOURCESDIRECTORY/sfdx-project.json -Destination $env:BUILD_STAGINGDIRECTORY/package/sfdx-project.json -Force
+	if (Test-Path -Path "$env:BUILD_SOURCESDIRECTORY/.forceignore") {        
+		Copy-Item -Path $env:BUILD_SOURCESDIRECTORY/.forceignore -Destination $env:BUILD_STAGINGDIRECTORY/package/.forceignore -Force
+	}
+        if ($env:SF_DEPLOY_PROFILE -eq "false"){
+            add-content $env:BUILD_STAGINGDIRECTORY/package/.forceignore "`r`n**/profiles/**"
+        }
+        Set-Content -Value $allChanges -Path "$env:BUILD_STAGINGDIRECTORY\package\$xmlNamePackage.txt"
+    } else {
+       NothingToDeploy
+       return
+    }
+}
+
+#destructiveChanges
+Write-Host "`r`nStarting building destructiveChanges"
+$allChanges = &git diff --name-only $env:SF_TAG_NAME --diff-filter=D
+if ($allChanges){
+    CheckFatalError($allChanges)
+    if ($allChanges.Count -gt 0){
+            Set-Content -Value $allChanges -Path "$env:BUILD_STAGINGDIRECTORY\package\$xmlNameDestructive.txt"
+    }
+}
+
+if ($env:SF_CREATE_ROLLBACK -ne "true") {
+    return
+}
+
+if(-not(Test-path -Path "$env:BUILD_STAGINGDIRECTORY\rollback")){
+    New-Item -ItemType Directory -Force "$env:BUILD_STAGINGDIRECTORY\rollback" | Out-Null
+}
+
+#destructiveChanges for rollback
+Write-Host "`r`nStarting building destructiveChanges for rollback"
+$allChanges = &git diff --name-only $env:SF_TAG_NAME --diff-filter=A
+if ($allChanges) {
+    CheckFatalError($allChanges)
+    if ($allChanges.Count -gt 0){
+            Set-Content -Value $allChanges -Path "$env:BUILD_STAGINGDIRECTORY\rollback\$xmlNameDestructive.txt"
+    }
+}
+
+#package for rollback
+Write-Host "`r`nStarting building package for rollback"
+$allChanges = &git diff --name-only $env:SF_TAG_NAME --diff-filter=a
+if (-not($allChanges)) {
+    Write-Host "Can't generate rollback package"
+    return
+}
+CheckFatalError($allChanges)
+if ($allChanges.Count -gt 0){
+    $changeset = Get-PackageFiles -allChanges $allChanges
+    if (-not($changeset)){
+        return
+    }
+    if ($changeset.Count -gt 0) {
+        Set-Content -Value $allChanges -Path "$env:BUILD_STAGINGDIRECTORY\rollback\$xmlNamePackage.txt"
+        git checkout $env:SF_TAG_NAME --force
+        Copy-Files -changeset $changeset -srcParent $env:BUILD_SOURCESDIRECTORY\$(SF_SRC_DIR)\main\default -destParent $env:BUILD_STAGINGDIRECTORY\rollback\$(SF_SRC_DIR)\main\default
+        mergeCustomLabel -customLabelPath $env:BUILD_STAGINGDIRECTORY/rollback/$(SF_SRC_DIR)/main/default/labels
+        merge-Translations -language "es_MX" -typePath $env:BUILD_STAGINGDIRECTORY/rollback/$(SF_SRC_DIR)/main/default/translations
+        merge-Translations -language "en_US" -typePath $env:BUILD_STAGINGDIRECTORY/rollback/$(SF_SRC_DIR)/main/default/translations
+        merge-Translations -language "pt_BR" -typePath $env:BUILD_STAGINGDIRECTORY/rollback/$(SF_SRC_DIR)/main/default/translations
+        merge-ProfileInFolder -Path $env:BUILD_STAGINGDIRECTORY/rollback/$(SF_SRC_DIR)/main/default/profiles -Directory
+        
+        Copy-Item -Path $env:BUILD_SOURCESDIRECTORY/sfdx-project.json -Destination $env:BUILD_STAGINGDIRECTORY/rollback/sfdx-project.json -Force
+	if (Test-Path -Path "$env:BUILD_SOURCESDIRECTORY/.forceignore") {   
+		Copy-Item -Path $env:BUILD_SOURCESDIRECTORY/.forceignore -Destination $env:BUILD_STAGINGDIRECTORY/rollback/.forceignore -Force
+	}
+        if ($env:SF_DEPLOY_PROFILE -eq "false"){
+            add-content $env:BUILD_STAGINGDIRECTORY/rollback/.forceignore "`r`n**/profiles/**"
+        }
+        $index = 11
+        if ($env:BUILD_SOURCEBRANCH.StartsWith("refs/tags/")){
+            $index = 10
+        }
+        git checkout $env:BUILD_SOURCEBRANCH.Substring($index) --force
+    }
+}
+
+2 publish pipeline artifact 
+to $(build.stagingdirectory) named as drop 
+
+3 check sfdx cli and auth org 
+REM @auth: Liquad Li on 2022-07-10
+WHERE sfdx >nul 2>&1
+IF %ERRORLEVEL% EQU 0 GOTO AUTH
+
+echo Installing sfdx...
+curl https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-win32-x64.tar.gz -o sfdx-win32-x64.tar.gz
+mkdir -p $(Build.StagingDirectory)\sfdx
+tar xzf sfdx-win32-x64.tar.gz -C $(Build.StagingDirectory)\sfdx --strip-components 1
+set PATH=$(Build.StagingDirectory)/sfdx/bin;%PATH%
+echo "##vso[task.setvariable variable=PATH]%PATH%"
+
+:AUTH
+echo $(SF_TRG_SECURITY) > .\dxsecurity
+sfdx force:auth:sfdxurl:store -f dxsecurity -s -a $(SF_TRG_ORG_ALIAS)
+echo "Authorized org and set alias to [$(SF_TRG_ORG_ALIAS)]"
+
+4 deploy source to target org
+# Copyright of PwC AC
+try {
+    Write-Host "Project Path: $(SF_PKG_NAME)"
+    
+    If ($SF_PKG_NAME -ne '') {
+    	cd  "$(SF_PKG_NAME)"
+    }
+
+    $args = @()
+
+    $alias = '$(SF_TRG_ORG_ALIAS)' -replace (' ', '')
+    $apiVersion = '$(SF_API_VERSION)' -replace (' ', '')
+    $isCheckOnly = '$(SF_CHECK_ONLY)' -replace (' ', '')
+    $srcDir = '$(SF_SRC_DIR)' -replace (' ', '')
+    $testLevel = '$(SF_TEST_LEVEL)' -replace (' ', '')
+    $testClassNames = '$(SF_TEST_CLASS_NAMES)' -replace (' ', '')
+    $ignoreWarning = 'true'
+
+    If ($apiVersion -ne '') {
+        $args += "--apiversion=$apiVersion"
+    }
+
+    If ($isCheckOnly -eq 'true') {
+        $args += '--checkonly'
+    }
+
+    If ($testLevel -ne '') {
+            $args += "--testlevel=$testLevel"
+    }
+
+    If ($testClassNames -ne '') {
+            $args += "--runtests=$testClassNames"
+    }
+
+    If ($srcDir -eq '') {
+        $args += '--sourcepath=".\force-app"'
+    } else {
+        $args += "--sourcepath="".\$srcDir"""
+    }
+
+   if ($ignoreWarning -ne 'false'){
+        $args += "--ignorewarnings"
+   }
+
+
+    $args += "--targetusername=$alias"
+    $args += "--verbose"
+    $args += "--wait=120"
+    Write-Host "DX arguments: $args"
+
+    & 'sfdx.cmd' 'force:source:deploy' $args
+
+} catch {
+    $msg = $_.Exception.Message
+    Write-Host "##vso[task.logissue type=error] $msg"
+    exit 1
+}
+
+5 reset deployment tag 
+# Copyright of PwC AC
+cd $env:BUILD_SOURCESDIRECTORY
+
+if ("$(SF_TAG_NAME)".StartsWith("origin/")) {
+  return
+}
+
+$env:GIT_REDIRECT_STDERR = '2>&1'
+$isCheckOnly = '$(SF_CHECK_ONLY)' -replace (' ', '')
+
+if ($isCheckOnly -eq "false") {
+   $originUrl = (git remote get-url --push origin).SubString(8)
+   if ($originUrl -match "@") {
+      $originUrl = $originUrl.Split("@",2)[1]
+   }
+
+    $url = "https://emptyuser:$(SF_GIT_PAT)@"+$originUrl
+    git remote set-url --push origin $url
+
+    git push origin --delete $(SF_TAG_NAME)
+    git tag -d $(SF_TAG_NAME)
+    git tag $(SF_TAG_NAME)
+    git push origin $(SF_TAG_NAME)
+}

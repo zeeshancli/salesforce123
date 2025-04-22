@@ -1,0 +1,2 @@
+sfdx force:auth:web:login -d -a dur_integdev2 -r https://duracell-sales--i2.sandbox.my.salesforce.com
+sfdx force:org:display --verbose --target-org dur_integdev2
